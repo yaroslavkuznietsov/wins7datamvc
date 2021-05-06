@@ -71,6 +71,8 @@ namespace WinS7Data.DataLibrary.Models
     public class Schritt
     {
         //property
+        [XmlIgnoreAttribute]
+        public int Id { get; set; }
         public UDTConfigSchritt OB { get; set; } = new UDTConfigSchritt();
         public UDTConfigSchritt OB_IG { get; set; } = new UDTConfigSchritt();
         public UDTConfigSchritt UN { get; set; } = new UDTConfigSchritt();
@@ -85,6 +87,8 @@ namespace WinS7Data.DataLibrary.Models
     public class Teilekontrolle
     {
         //property
+        [XmlIgnoreAttribute]
+        public int Id { get; set; }
         public UDTConfigSchritt OB { get; set; } = new UDTConfigSchritt();
         public UDTConfigSchritt UN { get; set; } = new UDTConfigSchritt();
 
@@ -185,6 +189,8 @@ namespace WinS7Data.DataLibrary.Models
     public class WerkzeugConfig
     {
         //property
+        [XmlIgnoreAttribute]
+        public int Id { get; set; }
         public NameOfInput Name { get; set; } = new NameOfInput();
         public TimeOfVentil Time { get; set; } = new TimeOfVentil();
 

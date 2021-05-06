@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using System.Xml.Serialization;
 
@@ -13,6 +14,10 @@ namespace WinS7Data.DataLibrary.Models
         public int Id { get; set; }
         [XmlIgnoreAttribute]
         public int MachineId { get; set; }
+        [XmlIgnoreAttribute]
+        [Required]
+        public Recipe Recipe { get; set; }
+
         public int WerkzeughoeheA1 { get; set; } = 0;
         public int WerkzeughoeheA2 { get; set; } = 0;
         public int HeizelementhoeheObenA3 { get; set; } = 0;

@@ -111,6 +111,8 @@ namespace WinS7Data.DataLibrary.Models
     public class ParameterSchritteClass
     {
         //property
+        [XmlIgnoreAttribute]
+        public int Id { get; set; }
         public AbholSchrittClass Abhol { get; set; } = new AbholSchrittClass();
         public HEVorpositionSchrittClass HEVorposition { get; set; } = new HEVorpositionSchrittClass();
         public Warm1SchrittClass Warm1 { get; set; } = new Warm1SchrittClass();
@@ -132,6 +134,8 @@ namespace WinS7Data.DataLibrary.Models
     public class AbholSchrittClass
     {
         //property
+        [XmlIgnoreAttribute]
+        public int Id { get; set; }
         public AbholAchseA1A2Class A1 { get; set; } = new AbholAchseA1A2Class();
         public AbholAchseA1A2Class A2 { get; set; } = new AbholAchseA1A2Class();
 
@@ -163,6 +167,8 @@ namespace WinS7Data.DataLibrary.Models
     public class HEVorpositionSchrittClass
     {
         //property
+        [XmlIgnoreAttribute]
+        public int Id { get; set; }
         public HEVorpositionAchseA1A2Class A1 { get; set; } = new HEVorpositionAchseA1A2Class();
         public HEVorpositionAchseA1A2Class A2 { get; set; } = new HEVorpositionAchseA1A2Class();
 
@@ -193,6 +199,8 @@ namespace WinS7Data.DataLibrary.Models
     public class Warm1SchrittClass
     {
         //property
+        [XmlIgnoreAttribute]
+        public int Id { get; set; }
         public Warm1AchseA1A2Class A1 { get; set; } = new Warm1AchseA1A2Class();
         public Warm1AchseA1A2Class A2 { get; set; } = new Warm1AchseA1A2Class();
         public Warm1AchseA3Class A3 { get; set; } = new Warm1AchseA3Class();
@@ -234,6 +242,8 @@ namespace WinS7Data.DataLibrary.Models
     public class Warm2SchrittClass
     {
         //property
+        [XmlIgnoreAttribute]
+        public int Id { get; set; }
         public Warm2AchseA1A2Class A1 { get; set; } = new Warm2AchseA1A2Class();
         public Warm2AchseA1A2Class A2 { get; set; } = new Warm2AchseA1A2Class();
         public int Zeit { get; set; } = 0;
@@ -264,6 +274,8 @@ namespace WinS7Data.DataLibrary.Models
     public class FuegeSchrittClass
     {
         //property
+        [XmlIgnoreAttribute]
+        public int Id { get; set; }
         public FuegeAchseA1Class A1 { get; set; } = new FuegeAchseA1Class();
         public FuegeAchseA2Class A2 { get; set; } = new FuegeAchseA2Class();
         public int Kuehlzeit { get; set; } = 0;
@@ -309,6 +321,8 @@ namespace WinS7Data.DataLibrary.Models
     public class SchmelzbildSchrittClass
     {
         //property
+        [XmlIgnoreAttribute]
+        public int Id { get; set; }
         public SchmelzbildAchseA1Class A1 { get; set; } = new SchmelzbildAchseA1Class();
 
         //ctor
