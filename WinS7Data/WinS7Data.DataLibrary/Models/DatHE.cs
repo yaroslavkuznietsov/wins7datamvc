@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.Serialization;
+using System.Xml.Serialization;
 
 namespace WinS7Data.DataLibrary.Models
 {
@@ -8,6 +9,8 @@ namespace WinS7Data.DataLibrary.Models
     public class DatHE : ISerializable
     {
         //property
+        [XmlIgnoreAttribute]
+        public int Id { get; set; }
         public HK HK01 { get; set; } = new HK();
         public HK HK02 { get; set; } = new HK();
         public HK HK03 { get; set; } = new HK();

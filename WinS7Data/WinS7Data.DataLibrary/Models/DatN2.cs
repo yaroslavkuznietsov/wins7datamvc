@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.Serialization;
+using System.Xml.Serialization;
 
 namespace WinS7Data.DataLibrary.Models
 {
@@ -8,6 +9,8 @@ namespace WinS7Data.DataLibrary.Models
     public class DatN2 : ISerializable
     {
         //property
+        [XmlIgnoreAttribute]
+        public int Id { get; set; }
         public Propventil Propventil01 { get; set; } = new Propventil();
         public Propventil Propventil02 { get; set; } = new Propventil();
         public Propventil Propventil03 { get; set; } = new Propventil();

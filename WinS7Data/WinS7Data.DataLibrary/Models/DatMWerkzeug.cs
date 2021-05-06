@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.Serialization;
+using System.Xml.Serialization;
 
 namespace WinS7Data.DataLibrary.Models
 {
@@ -8,6 +9,10 @@ namespace WinS7Data.DataLibrary.Models
     public class DatMWerkzeug : ISerializable
     {
         //property
+        [XmlIgnoreAttribute]
+        public int Id { get; set; }
+        [XmlIgnoreAttribute]
+        public int MachineId { get; set; }
         public int WerkzeughoeheA1 { get; set; } = 0;
         public int WerkzeughoeheA2 { get; set; } = 0;
         public int HeizelementhoeheObenA3 { get; set; } = 0;

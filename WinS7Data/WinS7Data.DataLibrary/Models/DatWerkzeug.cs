@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.Serialization;
+using System.Xml.Serialization;
 
 namespace WinS7Data.DataLibrary.Models
 {
@@ -8,6 +9,8 @@ namespace WinS7Data.DataLibrary.Models
     public class DatWerkzeug : ISerializable
     {
         //property
+        [XmlIgnoreAttribute]
+        public int Id { get; set; }
         public KennungClass Kennung { get; set; } = new KennungClass();
         public AktivierungSchritteClass AktivierungSchritte { get; set; } = new AktivierungSchritteClass();
         public ParameterSchritteClass ParameterSchritte { get; set; } = new ParameterSchritteClass();

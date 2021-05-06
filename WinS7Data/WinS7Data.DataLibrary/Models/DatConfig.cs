@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.Serialization;
+using System.Xml.Serialization;
 
 namespace WinS7Data.DataLibrary.Models
 {
@@ -8,6 +9,8 @@ namespace WinS7Data.DataLibrary.Models
     public class DatConfig : ISerializable
     {
         //property
+        [XmlIgnoreAttribute]
+        public int Id { get; set; }
         public Schritt GS { get; set; } = new Schritt();
         public Schritt ZYA { get; set; } = new Schritt();
         public Schritt T1 { get; set; } = new Schritt();
