@@ -21,5 +21,10 @@ namespace WinS7Data.DataLibrary.Models
         public int? DatWerkzeugId { get; set; }
         public DatWerkzeug DatWerkzeug { get; set; }
         public List<DatMWerkzeug> DatMWerkzeugs { get; set; }
+
+        public Recipe()
+        {
+            DatMWerkzeugs = new List<DatMWerkzeug>();
+        }
     }
 }
