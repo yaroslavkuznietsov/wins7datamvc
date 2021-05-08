@@ -1,4 +1,4 @@
-namespace WinS7Data.DataModel.Migrations
+﻿namespace WinS7Data.DataModel.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
