@@ -88,9 +88,10 @@
 
 @foreach (var item in Model) {
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.HK01)
-        </td>
+        <tr>
+            @*@Html.DisplayFor(modelItem => item.HK01)*@
+            @Html.Partial("_HK", item.HK01)
+        </tr>
         <td>
             @Html.DisplayFor(modelItem => item.HK02)
         </td>

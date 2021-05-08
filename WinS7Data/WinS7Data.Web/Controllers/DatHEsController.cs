@@ -7,13 +7,13 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using WinS7Data.DataLibrary.Models;
-using WinS7Data.Web.Models;
+using WinS7Data.DataModel;
 
 namespace WinS7Data.Web.Controllers
 {
     public class DatHEsController : Controller
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
+        private RecipeContext db = new RecipeContext();
 
         // GET: DatHEs
         public ActionResult Index()
