@@ -1,0 +1,439 @@
+﻿@model IEnumerable<WinS7Data.DataLibrary.Models.DatN2>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ToolCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ToolName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil01)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil02)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil03)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil04)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil05)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil06)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil07)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil08)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil09)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil10)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil11)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil12)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil13)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil14)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil15)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil16)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil17)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil18)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil19)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil20)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil21)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil22)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil23)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil24)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil25)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil26)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil27)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil28)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil29)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil30)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil31)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil32)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil33)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil34)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil35)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil36)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil37)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil38)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil39)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil40)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Propventil41)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil42)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil43)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil44)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil45)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil46)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil47)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil48)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil49)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil50)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil51)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil52)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil53)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil54)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil55)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil56)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil57)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil58)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil59)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propventil60)
+        </th>
+        <th></th>*@
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ToolCode)
+        </td>
+        <td style="white-space:nowrap">
+            @Html.DisplayFor(modelItem => item.ToolName)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Propventil01)*@
+            @Html.Partial("_PV", item.Propventil01)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Propventil02)*@
+            @Html.Partial("_PV", item.Propventil02)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Propventil03)*@
+            @Html.Partial("_PV", item.Propventil03)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Propventil04)*@
+            @Html.Partial("_PV", item.Propventil04)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Propventil05)*@
+            @Html.Partial("_PV", item.Propventil05)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Propventil06)*@
+            @Html.Partial("_PV", item.Propventil06)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Propventil07)*@
+            @Html.Partial("_PV", item.Propventil07)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Propventil08)*@
+            @Html.Partial("_PV", item.Propventil08)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Propventil09)*@
+            @Html.Partial("_PV", item.Propventil09)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Propventil10)*@
+            @Html.Partial("_PV", item.Propventil10)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Propventil11)*@
+            @Html.Partial("_PV", item.Propventil11)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Propventil12)*@
+            @Html.Partial("_PV", item.Propventil12)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Propventil13)*@
+            @Html.Partial("_PV", item.Propventil13)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Propventil14)*@
+            @Html.Partial("_PV", item.Propventil14)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Propventil15)*@
+            @Html.Partial("_PV", item.Propventil15)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Propventil16)*@
+            @Html.Partial("_PV", item.Propventil16)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Propventil17)*@
+            @Html.Partial("_PV", item.Propventil17)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Propventil18)*@
+            @Html.Partial("_PV", item.Propventil18)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Propventil19)*@
+            @Html.Partial("_PV", item.Propventil19)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Propventil20)*@
+            @Html.Partial("_PV", item.Propventil20)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Propventil21)*@
+            @Html.Partial("_PV", item.Propventil21)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Propventil22)*@
+            @Html.Partial("_PV", item.Propventil22)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Propventil23)*@
+            @Html.Partial("_PV", item.Propventil23)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Propventil24)*@
+            @Html.Partial("_PV", item.Propventil24)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Propventil25)*@
+            @Html.Partial("_PV", item.Propventil25)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Propventil26)*@
+            @Html.Partial("_PV", item.Propventil26)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Propventil27)*@
+            @Html.Partial("_PV", item.Propventil27)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Propventil28)*@
+            @Html.Partial("_PV", item.Propventil28)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Propventil29)*@
+            @Html.Partial("_PV", item.Propventil29)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Propventil30)*@
+            @Html.Partial("_PV", item.Propventil30)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Propventil31)*@
+            @Html.Partial("_PV", item.Propventil31)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Propventil32)*@
+            @Html.Partial("_PV", item.Propventil32)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Propventil33)*@
+            @Html.Partial("_PV", item.Propventil33)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Propventil34)*@
+            @Html.Partial("_PV", item.Propventil34)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Propventil35)*@
+            @Html.Partial("_PV", item.Propventil35)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Propventil36)*@
+            @Html.Partial("_PV", item.Propventil36)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Propventil37)*@
+            @Html.Partial("_PV", item.Propventil37)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Propventil38)*@
+            @Html.Partial("_PV", item.Propventil38)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Propventil39)*@
+            @Html.Partial("_PV", item.Propventil39)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Propventil40)*@
+            @Html.Partial("_PV", item.Propventil40)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Propventil41)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Propventil42)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Propventil43)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Propventil44)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Propventil45)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Propventil46)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Propventil47)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Propventil48)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Propventil49)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Propventil50)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Propventil51)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Propventil52)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Propventil53)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Propventil54)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Propventil55)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Propventil56)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Propventil57)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Propventil58)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Propventil59)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Propventil60)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>*@
+    </tr>
+}
+
+</table>

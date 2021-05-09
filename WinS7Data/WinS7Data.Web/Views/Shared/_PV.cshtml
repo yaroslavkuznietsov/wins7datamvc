@@ -1,0 +1,33 @@
+﻿@model WinS7Data.DataLibrary.Models.Propventil
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Soll)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ToleranzPlus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ToleranzMinus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Einschaltverzoegerung)
+        </th>
+        <th></th>
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => Model.Soll)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.ToleranzPlus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.ToleranzMinus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.Einschaltverzoegerung)
+        </td>
+    </tr>
+</table>

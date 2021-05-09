@@ -103,9 +103,13 @@ namespace WinS7Data.DataLibrary.Models
     public class Propventil
     {
         //property
+        [Display(Name = "Soll")]
         public double Soll { get; set; } = 0.0;
+        [Display(Name = "T+")]
         public double ToleranzPlus { get; set; } = 0.0;
+        [Display(Name = "T-")]
         public double ToleranzMinus { get; set; } = 0.0;
+        [Display(Name = "Vrz")]
         public double Einschaltverzoegerung { get; set; } = 0.0;
 
         //ctor

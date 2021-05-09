@@ -169,6 +169,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\DatHEsController.cs" />
+    <Compile Include="Controllers\DatN2sController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -242,6 +243,12 @@
     <Content Include="Views\DatHEs\Edit.cshtml" />
     <Content Include="Views\DatHEs\Index.cshtml" />
     <Content Include="Views\Shared\_HK.cshtml" />
+    <Content Include="Views\DatN2s\Create.cshtml" />
+    <Content Include="Views\DatN2s\Delete.cshtml" />
+    <Content Include="Views\DatN2s\Details.cshtml" />
+    <Content Include="Views\DatN2s\Edit.cshtml" />
+    <Content Include="Views\DatN2s\Index.cshtml" />
+    <Content Include="Views\Shared\_PV.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
