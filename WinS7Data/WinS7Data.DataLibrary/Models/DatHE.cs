@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using System.Xml.Serialization;
 
@@ -11,6 +12,12 @@ namespace WinS7Data.DataLibrary.Models
         //property
         [XmlIgnoreAttribute]
         public int Id { get; set; }
+        [XmlIgnoreAttribute]
+        [Display(Name = "RFID")]
+        public int ToolCode { get; set; }
+        [XmlIgnoreAttribute]
+        [Display(Name = "Tool")]
+        public string ToolName { get; set; }
         public HK HK01 { get; set; } = new HK();
         public HK HK02 { get; set; } = new HK();
         public HK HK03 { get; set; } = new HK();
@@ -59,14 +66,23 @@ namespace WinS7Data.DataLibrary.Models
     public class HK
     {
         //property
+        [Display(Name = "Soll")]
         public short TempSoll { get; set; } = 0;
+        [Display(Name = "T+")]
         public short ToleranzPlus { get; set; } = 0;
+        [Display(Name = "T-")]
         public short ToleranzMinus { get; set; } = 0;
+        [Display(Name = "Takt")]
         public short TempTaktung { get; set; } = 0;
+        [Display(Name = "Pulse")]
         public short Impulsdauer { get; set; } = 0;
+        [Display(Name = "Pause")]
         public short Pausendauer { get; set; } = 0;
+        [Display(Name = "Offset")]
         public short OffsetAT { get; set; } = 0;
+        [Display(Name = "PiAT")]
         public short PiAT { get; set; } = 0;
+        [Display(Name = "TMaxAT")]
         public short TMaxAT { get; set; } = 0;
         public bool Aktiv { get; set; } = false;
 

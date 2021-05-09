@@ -13,12 +13,15 @@ namespace WinS7Data.Web.Controllers
 {
     public class DatHEsController : Controller
     {
+        private readonly DisconnectedRepository _repo = new DisconnectedRepository();
         private RecipeContext db = new RecipeContext();
 
         // GET: DatHEs
         public ActionResult Index()
         {
-            return View(db.DatHEs.ToList());
+            List<DatHE> hes =_repo.GetAllDatHEs();
+            //return View(db.DatHEs.ToList());
+            return View(hes);
         }
 
         // GET: DatHEs/Details/5
@@ -113,6 +116,12 @@ namespace WinS7Data.Web.Controllers
             DatHE datHE = db.DatHEs.Find(id);
             db.DatHEs.Remove(datHE);
             db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Refresh()
+        {
+            _repo.GetAllRecipes();
             return RedirectToAction("Index");
         }
 

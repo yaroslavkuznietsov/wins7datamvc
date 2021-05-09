@@ -51,6 +51,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DeserializerForMvc.cs" />
+    <Compile Include="DisconnectedRepository.cs" />
     <Compile Include="Migrations\202105081455437_Initial.cs" />
     <Compile Include="Migrations\202105081455437_Initial.designer.cs">
       <DependentUpon>202105081455437_Initial.cs</DependentUpon>
@@ -58,6 +60,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecipeContext.cs" />
+    <Compile Include="ShortExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

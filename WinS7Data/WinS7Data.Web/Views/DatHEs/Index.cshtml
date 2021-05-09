@@ -9,8 +9,19 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
+
+@Html.ActionLink("Refresh", "Refresh", "DatHEs", null, new { @class = "btn btn-default" })
+
+
 <table class="table">
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ToolCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ToolName)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.HK01)
         </th>
@@ -86,87 +97,116 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
+    @foreach (var item in Model)
+    {
         <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ToolCode)
+        </td>
+        <td style="white-space:nowrap">
+            @Html.DisplayFor(modelItem => item.ToolName)
+        </td>
+        <td>
             @*@Html.DisplayFor(modelItem => item.HK01)*@
             @Html.Partial("_HK", item.HK01)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.HK02)*@
+            @Html.Partial("_HK", item.HK02)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.HK03)*@
+            @Html.Partial("_HK", item.HK03)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.HK04)*@
+            @Html.Partial("_HK", item.HK04)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.HK05)*@
+            @Html.Partial("_HK", item.HK05)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.HK06)*@
+            @Html.Partial("_HK", item.HK06)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.HK07)*@
+            @Html.Partial("_HK", item.HK07)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.HK08)*@
+            @Html.Partial("_HK", item.HK08)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.HK09)*@
+            @Html.Partial("_HK", item.HK09)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.HK10)*@
+            @Html.Partial("_HK", item.HK10)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.HK11)*@
+            @Html.Partial("_HK", item.HK11)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.HK12)*@
+            @Html.Partial("_HK", item.HK12)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.HK13)*@
+            @Html.Partial("_HK", item.HK13)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.HK14)*@
+            @Html.Partial("_HK", item.HK14)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.HK15)*@
+            @Html.Partial("_HK", item.HK15)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.HK16)*@
+            @Html.Partial("_HK", item.HK16)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.HK17)*@
+            @Html.Partial("_HK", item.HK17)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.HK18)*@
+            @Html.Partial("_HK", item.HK18)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.HK19)*@
+            @Html.Partial("_HK", item.HK19)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.HK20)*@
+            @Html.Partial("_HK", item.HK20)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.HK21)*@
+            @Html.Partial("_HK", item.HK21)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.HK22)*@
+            @Html.Partial("_HK", item.HK22)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.HK23)*@
+            @Html.Partial("_HK", item.HK23)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.HK24)*@
+            @Html.Partial("_HK", item.HK24)
+        </td>
+        @*<td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+        </td>*@
         </tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.HK02)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HK03)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HK04)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HK05)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HK06)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HK07)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HK08)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HK09)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HK10)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HK11)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HK12)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HK13)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HK14)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HK15)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HK16)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HK17)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HK18)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HK19)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HK20)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HK21)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HK22)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HK23)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HK24)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
-
+    }
 </table>

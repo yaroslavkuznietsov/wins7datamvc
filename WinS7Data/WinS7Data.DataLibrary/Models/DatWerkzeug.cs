@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using System.Xml.Serialization;
 
@@ -11,6 +12,13 @@ namespace WinS7Data.DataLibrary.Models
         //property
         [XmlIgnoreAttribute]
         public int Id { get; set; }
+        [XmlIgnoreAttribute]
+        [Display(Name = "RFID")]
+        public int ToolCode { get; set; }
+        [XmlIgnoreAttribute]
+        [Display(Name = "Tool")]
+        public string ToolName { get; set; }
+
         public KennungClass Kennung { get; set; } = new KennungClass();
         public AktivierungSchritteClass AktivierungSchritte { get; set; } = new AktivierungSchritteClass();
         public ParameterSchritteClass ParameterSchritte { get; set; } = new ParameterSchritteClass();

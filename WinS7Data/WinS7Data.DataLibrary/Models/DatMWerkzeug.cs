@@ -13,6 +13,12 @@ namespace WinS7Data.DataLibrary.Models
         [XmlIgnoreAttribute]
         public int Id { get; set; }
         [XmlIgnoreAttribute]
+        [Display(Name = "RFID")]
+        public int ToolCode { get; set; }
+        [XmlIgnoreAttribute]
+        [Display(Name = "Tool")]
+        public string ToolName { get; set; }
+        [XmlIgnoreAttribute]
         public int MachineId { get; set; }
         [XmlIgnoreAttribute]
         [Required]
