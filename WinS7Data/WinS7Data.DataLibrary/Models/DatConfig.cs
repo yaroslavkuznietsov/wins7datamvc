@@ -64,6 +64,8 @@ namespace WinS7Data.DataLibrary.Models
     public class UDTConfigSchritt
     {
         //property
+        [XmlIgnoreAttribute]
+        public int Id { get; set; }
         public short E_01_16 { get; set; } = 0;
         public short E_17_32 { get; set; } = 0;
         public short E_Vakuum { get; set; } = 0;
@@ -113,6 +115,8 @@ namespace WinS7Data.DataLibrary.Models
     public class NameOfInput
     {
         //property
+        [XmlIgnoreAttribute]
+        public int Id { get; set; }
         public string EO01 { get; set; } = String.Empty;
         public string EO02 { get; set; } = String.Empty;
         public string EO03 { get; set; } = String.Empty;
@@ -171,6 +175,8 @@ namespace WinS7Data.DataLibrary.Models
     public class TimeOfVentil
     {
         //property
+        [XmlIgnoreAttribute]
+        public int Id { get; set; }
         public short TVO121 { get; set; } = 0;
         public short TVO141 { get; set; } = 0;
         public short TVO122 { get; set; } = 0;

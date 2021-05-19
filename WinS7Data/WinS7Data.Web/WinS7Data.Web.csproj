@@ -168,6 +168,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\DatConfigsController.cs" />
     <Compile Include="Controllers\DatHEsController.cs" />
     <Compile Include="Controllers\DatN2sController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -249,6 +250,13 @@
     <Content Include="Views\DatN2s\Edit.cshtml" />
     <Content Include="Views\DatN2s\Index.cshtml" />
     <Content Include="Views\Shared\_PV.cshtml" />
+    <Content Include="Views\DatConfigs\Create.cshtml" />
+    <Content Include="Views\DatConfigs\Delete.cshtml" />
+    <Content Include="Views\DatConfigs\Details.cshtml" />
+    <Content Include="Views\DatConfigs\Edit.cshtml" />
+    <Content Include="Views\DatConfigs\Index.cshtml" />
+    <Content Include="Views\DatConfigs\_UDTConfigSchritt.cshtml" />
+    <Content Include="Views\DatConfigs\_Schritt.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

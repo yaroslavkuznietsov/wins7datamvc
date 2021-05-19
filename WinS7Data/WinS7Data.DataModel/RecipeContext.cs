@@ -15,5 +15,9 @@ namespace WinS7Data.DataModel
         public DbSet<DatN2> DatN2s { get; set; }
         public DbSet<DatWerkzeug> DatWerkzeugs { get; set; }
         public DbSet<DatMWerkzeug> DatMWerkzeugs { get; set; }
+
+        public System.Data.Entity.DbSet<WinS7Data.DataLibrary.Models.UDTConfigSchritt> UDTConfigSchritts { get; set; }
+
+        public System.Data.Entity.DbSet<WinS7Data.DataLibrary.Models.Schritt> Schritts { get; set; }
     }
 }
