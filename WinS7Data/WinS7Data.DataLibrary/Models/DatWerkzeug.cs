@@ -63,6 +63,8 @@ namespace WinS7Data.DataLibrary.Models
     public class KennungClass
     {
         //property
+        [XmlIgnoreAttribute]
+        public int Id { get; set; }
         public string ProgrammName { get; set; } = String.Empty;
         public byte RFIDHE { get; set; } = 0;
         public byte RFIDOB { get; set; } = 0;
@@ -85,6 +87,8 @@ namespace WinS7Data.DataLibrary.Models
     public class AktivierungSchritteClass
     {
         //property
+        [XmlIgnoreAttribute]
+        public int Id { get; set; }
         public bool SpannenT1 { get; set; } = false;
         public bool SpannenT2 { get; set; } = false;
         public bool Abholtakt { get; set; } = false;
@@ -155,6 +159,8 @@ namespace WinS7Data.DataLibrary.Models
     public class AbholAchseA1A2Class
     {
         //property
+        [XmlIgnoreAttribute]
+        public int Id { get; set; }
         public int VorPosition { get; set; } = 0;
         public int EndPosition { get; set; } = 0;
         public int Geschwindigkeit { get; set; } = 0;
@@ -188,6 +194,8 @@ namespace WinS7Data.DataLibrary.Models
     public class HEVorpositionAchseA1A2Class
     {
         //property
+        [XmlIgnoreAttribute]
+        public int Id { get; set; }
         public int Position { get; set; } = 0;
         public int Geschwindigkeit { get; set; } = 0;
 
@@ -221,6 +229,8 @@ namespace WinS7Data.DataLibrary.Models
     public class Warm1AchseA1A2Class
     {
         //property
+        [XmlIgnoreAttribute]
+        public int Id { get; set; }
         public int Position { get; set; } = 0;
         public int Geschwindigkeit { get; set; } = 0;
 
@@ -232,6 +242,8 @@ namespace WinS7Data.DataLibrary.Models
     public class Warm1AchseA3Class
     {
         //property
+        [XmlIgnoreAttribute]
+        public int Id { get; set; }
         public int Position { get; set; } = 0;
 
         //ctor
@@ -263,6 +275,8 @@ namespace WinS7Data.DataLibrary.Models
     public class Warm2AchseA1A2Class
     {
         //property
+        [XmlIgnoreAttribute]
+        public int Id { get; set; }
         public int Position { get; set; } = 0;
         public int Geschwindigkeit { get; set; } = 0;
 
@@ -295,6 +309,8 @@ namespace WinS7Data.DataLibrary.Models
     public class FuegeAchseA1Class
     {
         //property
+        [XmlIgnoreAttribute]
+        public int Id { get; set; }
         public int VorPosition { get; set; } = 0;
         public int EndPosition { get; set; } = 0;
         public int Geschwindigkeit { get; set; } = 0;
@@ -309,6 +325,8 @@ namespace WinS7Data.DataLibrary.Models
     public class FuegeAchseA2Class
     {
         //property
+        [XmlIgnoreAttribute]
+        public int Id { get; set; }
         public int VorPosition { get; set; } = 0;
         public int EndPosition { get; set; } = 0;
         public int Geschwindigkeit { get; set; } = 0;
@@ -341,6 +359,8 @@ namespace WinS7Data.DataLibrary.Models
     public class SchmelzbildAchseA1Class
     {
         //property
+        [XmlIgnoreAttribute]
+        public int Id { get; set; }
         public int Position { get; set; } = 0;
         public int Geschwindigkeit { get; set; } = 0;
 
@@ -365,6 +385,8 @@ namespace WinS7Data.DataLibrary.Models
     public class AchsenStromClass
     {
         //property
+        [XmlIgnoreAttribute]
+        public int Id { get; set; }
         public short FuegekraftMaxA1 { get; set; } = 0;
         public short FuegekraftMinA1 { get; set; } = 0;
         public short FuegekraftMaxA2 { get; set; } = 0;
@@ -389,6 +411,8 @@ namespace WinS7Data.DataLibrary.Models
     public class ZaehlerClass
     {
         //property
+        [XmlIgnoreAttribute]
+        public int Id { get; set; }
         public short NIONF { get; set; } = 0;
         public short NIOVF { get; set; } = 0;
         public short Stueckzaehler { get; set; } = 0;
@@ -409,6 +433,8 @@ namespace WinS7Data.DataLibrary.Models
     public class AktivierungN2GasClass
     {
         //property
+        [XmlIgnoreAttribute]
+        public int Id { get; set; }
         public bool N2G1 { get; set; } = false;
         public bool N2G2 { get; set; } = false;
         public bool N2G3 { get; set; } = false;
@@ -435,6 +461,8 @@ namespace WinS7Data.DataLibrary.Models
     public class AktivierungSontigesClass
     {
         //property
+        [XmlIgnoreAttribute]
+        public int Id { get; set; }
         public bool ExternerE1 { get; set; } = false;
         public bool ExternerE2 { get; set; } = false;
         public bool ExternePruefung1 { get; set; } = false;
@@ -469,6 +497,8 @@ namespace WinS7Data.DataLibrary.Models
     public class BursterDigiforceKraftWegClass
     {
         //property
+        [XmlIgnoreAttribute]
+        public int Id { get; set; }
         public byte FuegewegKraftNest1 { get; set; } = 0;
         public byte FuegewegKraftNest2 { get; set; } = 0;
         public short BursterProgrammNest1 { get; set; } = 0;
@@ -491,6 +521,8 @@ namespace WinS7Data.DataLibrary.Models
     public class BursterDigiforceMinsdestkraftClass
     {
         //property
+        [XmlIgnoreAttribute]
+        public int Id { get; set; }
         public bool BursterMindestKraftAktiv { get; set; } = false;
         public float MindestkraftSollNest1 { get; set; } = 0;
         public float MindestkraftToleranzPlusNest1 { get; set; } = 0;
@@ -516,6 +548,8 @@ namespace WinS7Data.DataLibrary.Models
     public class IRCameraClass
     {
         //property
+        [XmlIgnoreAttribute]
+        public int Id { get; set; }
         public ushort KameraProgramm { get; set; } = 0;
         public byte KameraSchalter { get; set; } = 0;
         public int KameraLuftschleier { get; set; } = 0;
@@ -539,6 +573,8 @@ namespace WinS7Data.DataLibrary.Models
     public class DMXCheckClass
     {
         //property
+        [XmlIgnoreAttribute]
+        public int Id { get; set; }
         public int DayDifferenceSet { get; set; } = 0;
         public bool ActiveDMXCheck { get; set; } = false;
 
@@ -558,6 +594,8 @@ namespace WinS7Data.DataLibrary.Models
     public class Ausgleichshub
     {
         //property
+        [XmlIgnoreAttribute]
+        public int Id { get; set; }
         public double Links { get; set; } = 0.0;
         public double Rechts { get; set; } = 0.0;
 
