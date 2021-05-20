@@ -1,0 +1,29 @@
+﻿@model WinS7Data.DataLibrary.Models.Teilekontrolle
+
+@*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.OB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UN)
+        </th>
+        @*<th></th>*@
+    </tr>
+    <tr>
+        <td>
+            @Html.Partial("_UDTConfigSchritt", Model.OB)
+        </td>
+        <td>
+            @Html.Partial("_UDTConfigSchritt", Model.UN)
+        </td>
+        @*<td>
+                @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = Model.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = Model.Id })
+            </td>*@
+    </tr>
+</table>

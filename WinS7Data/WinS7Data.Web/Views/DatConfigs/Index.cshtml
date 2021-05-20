@@ -20,6 +20,57 @@
         <th>
             @Html.DisplayNameFor(model => model.GS)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ZYA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.T1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.T2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KU)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AU)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ZYE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Reserve)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TK)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WKZOB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WKZUN)
+        </th>
         @*<th></th>*@
     </tr>
 
@@ -28,17 +79,67 @@
     <td>
         @Html.DisplayFor(modelItem => item.ToolCode)
     </td>
-    <td>
+    <td style="white-space:nowrap">
         @Html.DisplayFor(modelItem => item.ToolName)
-    </td>
     <td>
         @Html.Partial("_Schritt", item.GS)
     </td>
+    <td>
+        @Html.Partial("_Schritt", item.ZYA)
+    </td>
+    <td>
+        @Html.Partial("_Schritt", item.T1)
+    </td>
+    <td>
+        @Html.Partial("_Schritt", item.T2)
+    </td>
+    <td>
+        @Html.Partial("_Schritt", item.PN)
+    </td>
+    <td>
+        @Html.Partial("_Schritt", item.AV)
+    </td>
+    <td>
+        @Html.Partial("_Schritt", item.AP)
+    </td>
+    <td>
+        @Html.Partial("_Schritt", item.PT)
+    </td>
+    <td>
+        @Html.Partial("_Schritt", item.WV)
+    </td>
+    <td>
+        @Html.Partial("_Schritt", item.WE)
+    </td>
+    <td>
+        @Html.Partial("_Schritt", item.KU)
+    </td>
+    <td>
+        @Html.Partial("_Schritt", item.AU)
+    </td>
+    <td>
+        @Html.Partial("_Schritt", item.ZYE)
+    </td>
+    <td>
+        @Html.Partial("_Schritt", item.RO)
+    </td>
+    <td>
+        @Html.Partial("_Schritt", item.Reserve)
+    </td>
+    <td>
+        @Html.Partial("_Teilekontrolle", item.TK)
+    </td>
+    <td>
+        @Html.Partial("_WerkzeugConfig", item.WKZOB)
+    </td>
+    <td>
+        @Html.Partial("_WerkzeugConfig", item.WKZUN)
+    </td>
     @*<td>
-        @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-        @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-    </td>*@
+            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+        </td>*@
 </tr>
 }
 

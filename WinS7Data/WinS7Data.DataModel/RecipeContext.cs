@@ -19,5 +19,13 @@ namespace WinS7Data.DataModel
         public System.Data.Entity.DbSet<WinS7Data.DataLibrary.Models.UDTConfigSchritt> UDTConfigSchritts { get; set; }
 
         public System.Data.Entity.DbSet<WinS7Data.DataLibrary.Models.Schritt> Schritts { get; set; }
+
+        public System.Data.Entity.DbSet<WinS7Data.DataLibrary.Models.Teilekontrolle> Teilekontrolles { get; set; }
+
+        public System.Data.Entity.DbSet<WinS7Data.DataLibrary.Models.WerkzeugConfig> WerkzeugConfigs { get; set; }
+
+        public System.Data.Entity.DbSet<WinS7Data.DataLibrary.Models.NameOfInput> NameOfInputs { get; set; }
+
+        public System.Data.Entity.DbSet<WinS7Data.DataLibrary.Models.TimeOfVentil> TimeOfVentils { get; set; }
     }
 }

@@ -257,6 +257,10 @@
     <Content Include="Views\DatConfigs\Index.cshtml" />
     <Content Include="Views\DatConfigs\_UDTConfigSchritt.cshtml" />
     <Content Include="Views\DatConfigs\_Schritt.cshtml" />
+    <Content Include="Views\DatConfigs\_Teilekontrolle.cshtml" />
+    <Content Include="Views\DatConfigs\_WerkzeugConfig.cshtml" />
+    <Content Include="Views\DatConfigs\_NameOfInput.cshtml" />
+    <Content Include="Views\DatConfigs\_TimeOfVentil.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
