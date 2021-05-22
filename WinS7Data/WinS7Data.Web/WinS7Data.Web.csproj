@@ -171,6 +171,7 @@
     <Compile Include="Controllers\DatConfigsController.cs" />
     <Compile Include="Controllers\DatHEsController.cs" />
     <Compile Include="Controllers\DatN2sController.cs" />
+    <Compile Include="Controllers\DatWerkzeugsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -261,6 +262,11 @@
     <Content Include="Views\DatConfigs\_WerkzeugConfig.cshtml" />
     <Content Include="Views\DatConfigs\_NameOfInput.cshtml" />
     <Content Include="Views\DatConfigs\_TimeOfVentil.cshtml" />
+    <Content Include="Views\DatWerkzeugs\Create.cshtml" />
+    <Content Include="Views\DatWerkzeugs\Delete.cshtml" />
+    <Content Include="Views\DatWerkzeugs\Details.cshtml" />
+    <Content Include="Views\DatWerkzeugs\Edit.cshtml" />
+    <Content Include="Views\DatWerkzeugs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

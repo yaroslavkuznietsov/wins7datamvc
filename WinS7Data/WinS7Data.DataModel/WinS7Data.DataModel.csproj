@@ -53,9 +53,9 @@
   <ItemGroup>
     <Compile Include="DeserializerForMvc.cs" />
     <Compile Include="DisconnectedRepository.cs" />
-    <Compile Include="Migrations\202105081455437_Initial.cs" />
-    <Compile Include="Migrations\202105081455437_Initial.designer.cs">
-      <DependentUpon>202105081455437_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\202105202125069_Initial.cs" />
+    <Compile Include="Migrations\202105202125069_Initial.designer.cs">
+      <DependentUpon>202105202125069_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -75,8 +75,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202105081455437_Initial.resx">
-      <DependentUpon>202105081455437_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105202125069_Initial.resx">
+      <DependentUpon>202105202125069_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -13,7 +13,7 @@ namespace WinS7Data.DataModel.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202105081455437_Initial"; }
+            get { return "202105202125069_Initial"; }
         }
         
         string IMigrationMetadata.Source

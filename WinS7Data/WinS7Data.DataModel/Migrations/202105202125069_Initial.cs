@@ -12,6 +12,8 @@
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
+                        ToolCode = c.Int(nullable: false),
+                        ToolName = c.String(),
                         AP_Id = c.Int(),
                         AU_Id = c.Int(),
                         AV_Id = c.Int(),
@@ -74,26 +76,31 @@
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        OB_E_01_16 = c.Short(nullable: false),
-                        OB_E_17_32 = c.Short(nullable: false),
-                        OB_E_Vakuum = c.Short(nullable: false),
-                        OB_A_Vakuum = c.Short(nullable: false),
-                        OB_A_Ventile_1_8 = c.Short(nullable: false),
-                        OB_IG_E_01_16 = c.Short(nullable: false),
-                        OB_IG_E_17_32 = c.Short(nullable: false),
-                        OB_IG_E_Vakuum = c.Short(nullable: false),
-                        OB_IG_A_Vakuum = c.Short(nullable: false),
-                        OB_IG_A_Ventile_1_8 = c.Short(nullable: false),
-                        UN_E_01_16 = c.Short(nullable: false),
-                        UN_E_17_32 = c.Short(nullable: false),
-                        UN_E_Vakuum = c.Short(nullable: false),
-                        UN_A_Vakuum = c.Short(nullable: false),
-                        UN_A_Ventile_1_8 = c.Short(nullable: false),
-                        UN_IG_E_01_16 = c.Short(nullable: false),
-                        UN_IG_E_17_32 = c.Short(nullable: false),
-                        UN_IG_E_Vakuum = c.Short(nullable: false),
-                        UN_IG_A_Vakuum = c.Short(nullable: false),
-                        UN_IG_A_Ventile_1_8 = c.Short(nullable: false),
+                        OB_Id = c.Int(),
+                        OB_IG_Id = c.Int(),
+                        UN_Id = c.Int(),
+                        UN_IG_Id = c.Int(),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.UDTConfigSchritts", t => t.OB_Id)
+                .ForeignKey("dbo.UDTConfigSchritts", t => t.OB_IG_Id)
+                .ForeignKey("dbo.UDTConfigSchritts", t => t.UN_Id)
+                .ForeignKey("dbo.UDTConfigSchritts", t => t.UN_IG_Id)
+                .Index(t => t.OB_Id)
+                .Index(t => t.OB_IG_Id)
+                .Index(t => t.UN_Id)
+                .Index(t => t.UN_IG_Id);
+            
+            CreateTable(
+                "dbo.UDTConfigSchritts",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        E_01_16 = c.Short(nullable: false),
+                        E_17_32 = c.Short(nullable: false),
+                        E_Vakuum = c.Short(nullable: false),
+                        A_Vakuum = c.Short(nullable: false),
+                        A_Ventile_1_8 = c.Short(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -102,88 +109,106 @@
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        OB_E_01_16 = c.Short(nullable: false),
-                        OB_E_17_32 = c.Short(nullable: false),
-                        OB_E_Vakuum = c.Short(nullable: false),
-                        OB_A_Vakuum = c.Short(nullable: false),
-                        OB_A_Ventile_1_8 = c.Short(nullable: false),
-                        UN_E_01_16 = c.Short(nullable: false),
-                        UN_E_17_32 = c.Short(nullable: false),
-                        UN_E_Vakuum = c.Short(nullable: false),
-                        UN_A_Vakuum = c.Short(nullable: false),
-                        UN_A_Ventile_1_8 = c.Short(nullable: false),
+                        OB_Id = c.Int(),
+                        UN_Id = c.Int(),
                     })
-                .PrimaryKey(t => t.Id);
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.UDTConfigSchritts", t => t.OB_Id)
+                .ForeignKey("dbo.UDTConfigSchritts", t => t.UN_Id)
+                .Index(t => t.OB_Id)
+                .Index(t => t.UN_Id);
             
             CreateTable(
                 "dbo.WerkzeugConfigs",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Name_EO01 = c.String(),
-                        Name_EO02 = c.String(),
-                        Name_EO03 = c.String(),
-                        Name_EO04 = c.String(),
-                        Name_EO05 = c.String(),
-                        Name_EO06 = c.String(),
-                        Name_EO07 = c.String(),
-                        Name_EO08 = c.String(),
-                        Name_EO09 = c.String(),
-                        Name_EO10 = c.String(),
-                        Name_EO11 = c.String(),
-                        Name_EO12 = c.String(),
-                        Name_EO13 = c.String(),
-                        Name_EO14 = c.String(),
-                        Name_EO15 = c.String(),
-                        Name_EO16 = c.String(),
-                        Name_EO17 = c.String(),
-                        Name_EO18 = c.String(),
-                        Name_EO19 = c.String(),
-                        Name_EO20 = c.String(),
-                        Name_EO21 = c.String(),
-                        Name_EO22 = c.String(),
-                        Name_EO23 = c.String(),
-                        Name_EO24 = c.String(),
-                        Name_EO25 = c.String(),
-                        Name_EO26 = c.String(),
-                        Name_EO27 = c.String(),
-                        Name_EO28 = c.String(),
-                        Name_EO29 = c.String(),
-                        Name_EO30 = c.String(),
-                        Name_EO31 = c.String(),
-                        Name_EO32 = c.String(),
-                        Name_VO121 = c.String(),
-                        Name_VO141 = c.String(),
-                        Name_VO122 = c.String(),
-                        Name_VO142 = c.String(),
-                        Name_VO123 = c.String(),
-                        Name_VO143 = c.String(),
-                        Name_VO124 = c.String(),
-                        Name_VO144 = c.String(),
-                        Name_VO125 = c.String(),
-                        Name_VO145 = c.String(),
-                        Name_VO126 = c.String(),
-                        Name_VO146 = c.String(),
-                        Name_VO127 = c.String(),
-                        Name_VO147 = c.String(),
-                        Name_VO128 = c.String(),
-                        Name_VO148 = c.String(),
-                        Time_TVO121 = c.Short(nullable: false),
-                        Time_TVO141 = c.Short(nullable: false),
-                        Time_TVO122 = c.Short(nullable: false),
-                        Time_TVO142 = c.Short(nullable: false),
-                        Time_TVO123 = c.Short(nullable: false),
-                        Time_TVO143 = c.Short(nullable: false),
-                        Time_TVO124 = c.Short(nullable: false),
-                        Time_TVO144 = c.Short(nullable: false),
-                        Time_TVO125 = c.Short(nullable: false),
-                        Time_TVO145 = c.Short(nullable: false),
-                        Time_TVO126 = c.Short(nullable: false),
-                        Time_TVO146 = c.Short(nullable: false),
-                        Time_TVO127 = c.Short(nullable: false),
-                        Time_TVO147 = c.Short(nullable: false),
-                        Time_TVO128 = c.Short(nullable: false),
-                        Time_TVO148 = c.Short(nullable: false),
+                        Name_Id = c.Int(),
+                        Time_Id = c.Int(),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.NameOfInputs", t => t.Name_Id)
+                .ForeignKey("dbo.TimeOfVentils", t => t.Time_Id)
+                .Index(t => t.Name_Id)
+                .Index(t => t.Time_Id);
+            
+            CreateTable(
+                "dbo.NameOfInputs",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        EO01 = c.String(),
+                        EO02 = c.String(),
+                        EO03 = c.String(),
+                        EO04 = c.String(),
+                        EO05 = c.String(),
+                        EO06 = c.String(),
+                        EO07 = c.String(),
+                        EO08 = c.String(),
+                        EO09 = c.String(),
+                        EO10 = c.String(),
+                        EO11 = c.String(),
+                        EO12 = c.String(),
+                        EO13 = c.String(),
+                        EO14 = c.String(),
+                        EO15 = c.String(),
+                        EO16 = c.String(),
+                        EO17 = c.String(),
+                        EO18 = c.String(),
+                        EO19 = c.String(),
+                        EO20 = c.String(),
+                        EO21 = c.String(),
+                        EO22 = c.String(),
+                        EO23 = c.String(),
+                        EO24 = c.String(),
+                        EO25 = c.String(),
+                        EO26 = c.String(),
+                        EO27 = c.String(),
+                        EO28 = c.String(),
+                        EO29 = c.String(),
+                        EO30 = c.String(),
+                        EO31 = c.String(),
+                        EO32 = c.String(),
+                        VO121 = c.String(),
+                        VO141 = c.String(),
+                        VO122 = c.String(),
+                        VO142 = c.String(),
+                        VO123 = c.String(),
+                        VO143 = c.String(),
+                        VO124 = c.String(),
+                        VO144 = c.String(),
+                        VO125 = c.String(),
+                        VO145 = c.String(),
+                        VO126 = c.String(),
+                        VO146 = c.String(),
+                        VO127 = c.String(),
+                        VO147 = c.String(),
+                        VO128 = c.String(),
+                        VO148 = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.TimeOfVentils",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        TVO121 = c.Short(nullable: false),
+                        TVO141 = c.Short(nullable: false),
+                        TVO122 = c.Short(nullable: false),
+                        TVO142 = c.Short(nullable: false),
+                        TVO123 = c.Short(nullable: false),
+                        TVO143 = c.Short(nullable: false),
+                        TVO124 = c.Short(nullable: false),
+                        TVO144 = c.Short(nullable: false),
+                        TVO125 = c.Short(nullable: false),
+                        TVO145 = c.Short(nullable: false),
+                        TVO126 = c.Short(nullable: false),
+                        TVO146 = c.Short(nullable: false),
+                        TVO127 = c.Short(nullable: false),
+                        TVO147 = c.Short(nullable: false),
+                        TVO128 = c.Short(nullable: false),
+                        TVO148 = c.Short(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -192,6 +217,8 @@
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
+                        ToolCode = c.Int(nullable: false),
+                        ToolName = c.String(),
                         HK01_TempSoll = c.Short(nullable: false),
                         HK01_ToleranzPlus = c.Short(nullable: false),
                         HK01_ToleranzMinus = c.Short(nullable: false),
@@ -440,6 +467,8 @@
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
+                        ToolCode = c.Int(nullable: false),
+                        ToolName = c.String(),
                         MachineId = c.Int(nullable: false),
                         WerkzeughoeheA1 = c.Int(nullable: false),
                         WerkzeughoeheA2 = c.Int(nullable: false),
@@ -484,6 +513,8 @@
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
+                        ToolCode = c.Int(nullable: false),
+                        ToolName = c.String(),
                         Propventil01_Soll = c.Double(nullable: false),
                         Propventil01_ToleranzPlus = c.Double(nullable: false),
                         Propventil01_ToleranzMinus = c.Double(nullable: false),
@@ -732,83 +763,195 @@
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Kennung_ProgrammName = c.String(),
-                        Kennung_RFIDHE = c.Byte(nullable: false),
-                        Kennung_RFIDOB = c.Byte(nullable: false),
-                        Kennung_RFIDUN = c.Byte(nullable: false),
-                        AktivierungSchritte_SpannenT1 = c.Boolean(nullable: false),
-                        AktivierungSchritte_SpannenT2 = c.Boolean(nullable: false),
-                        AktivierungSchritte_Abholtakt = c.Boolean(nullable: false),
-                        AktivierungSchritte_Prueftakt = c.Boolean(nullable: false),
-                        AktivierungSchritte_WarmVor = c.Boolean(nullable: false),
-                        AktivierungSchritte_WarmEnde = c.Boolean(nullable: false),
-                        AktivierungSchritte_Auswerfer = c.Boolean(nullable: false),
-                        AktivierungSchritte_Roboter = c.Boolean(nullable: false),
-                        AktivierungSchritte_Reserve4 = c.Boolean(nullable: false),
-                        AktivierungSchritte_Reserve5 = c.Boolean(nullable: false),
-                        AktivierungSchritte_Reserve6 = c.Boolean(nullable: false),
-                        AktivierungSchritte_Reserve7 = c.Boolean(nullable: false),
-                        AktivierungSchritte_Reserve8 = c.Boolean(nullable: false),
-                        AktivierungSchritte_Reserve9 = c.Boolean(nullable: false),
-                        AktivierungSchritte_StopNachFuegen = c.Boolean(nullable: false),
-                        AktivierungSchritte_OeffnenNachFuegen = c.Boolean(nullable: false),
-                        AchsenStrom_FuegekraftMaxA1 = c.Short(nullable: false),
-                        AchsenStrom_FuegekraftMinA1 = c.Short(nullable: false),
-                        AchsenStrom_FuegekraftMaxA2 = c.Short(nullable: false),
-                        AchsenStrom_FuegekraftMinA2 = c.Short(nullable: false),
-                        AchsenStrom_Strommessung = c.Byte(nullable: false),
-                        AchsenStrom_FuegenStart = c.Short(nullable: false),
-                        Zaehler_NIONF = c.Short(nullable: false),
-                        Zaehler_NIOVF = c.Short(nullable: false),
-                        Zaehler_Stueckzaehler = c.Short(nullable: false),
-                        AktivierungN2Gas_N2G1 = c.Boolean(nullable: false),
-                        AktivierungN2Gas_N2G2 = c.Boolean(nullable: false),
-                        AktivierungN2Gas_N2G3 = c.Boolean(nullable: false),
-                        AktivierungN2Gas_N2G4 = c.Boolean(nullable: false),
-                        AktivierungN2Gas_Reserve5 = c.Boolean(nullable: false),
-                        AktivierungN2Gas_Reserve6 = c.Boolean(nullable: false),
-                        AktivierungN2Gas_Reserve7 = c.Boolean(nullable: false),
-                        AktivierungN2Gas_Reserve8 = c.Boolean(nullable: false),
-                        AktivierungSontiges_ExternerE1 = c.Boolean(nullable: false),
-                        AktivierungSontiges_ExternerE2 = c.Boolean(nullable: false),
-                        AktivierungSontiges_ExternePruefung1 = c.Boolean(nullable: false),
-                        AktivierungSontiges_ExternePruefung2 = c.Boolean(nullable: false),
-                        AktivierungSontiges_OptionUmschaltung1 = c.Boolean(nullable: false),
-                        AktivierungSontiges_Reserve6 = c.Boolean(nullable: false),
-                        AktivierungSontiges_Reserve7 = c.Boolean(nullable: false),
-                        AktivierungSontiges_Reserve8 = c.Boolean(nullable: false),
-                        AktivierungSontiges_Reserve9 = c.Boolean(nullable: false),
-                        AktivierungSontiges_Reserve10 = c.Boolean(nullable: false),
-                        AktivierungSontiges_Reserve11 = c.Boolean(nullable: false),
-                        AktivierungSontiges_Reserve12 = c.Boolean(nullable: false),
-                        AktivierungSontiges_Reserve13 = c.Boolean(nullable: false),
-                        AktivierungSontiges_Reserve14 = c.Boolean(nullable: false),
-                        AktivierungSontiges_Reserve15 = c.Boolean(nullable: false),
-                        AktivierungSontiges_Reserve16 = c.Boolean(nullable: false),
-                        BursterDigiforceKraftWeg_FuegewegKraftNest1 = c.Byte(nullable: false),
-                        BursterDigiforceKraftWeg_FuegewegKraftNest2 = c.Byte(nullable: false),
-                        BursterDigiforceKraftWeg_BursterProgrammNest1 = c.Short(nullable: false),
-                        BursterDigiforceKraftWeg_BursterProgrammNest2 = c.Short(nullable: false),
-                        BursterDigiforceMinsdestkraft_BursterMindestKraftAktiv = c.Boolean(nullable: false),
-                        BursterDigiforceMinsdestkraft_MindestkraftSollNest1 = c.Single(nullable: false),
-                        BursterDigiforceMinsdestkraft_MindestkraftToleranzPlusNest1 = c.Single(nullable: false),
-                        BursterDigiforceMinsdestkraft_MindestkraftToleranzMinusNest1 = c.Single(nullable: false),
-                        BursterDigiforceMinsdestkraft_MindestkraftSollNest2 = c.Single(nullable: false),
-                        BursterDigiforceMinsdestkraft_MindestkraftToleranzPlusNest2 = c.Single(nullable: false),
-                        BursterDigiforceMinsdestkraft_MindestkraftToleranzMinusNest2 = c.Single(nullable: false),
-                        IRCamera_KameraSchalter = c.Byte(nullable: false),
-                        IRCamera_KameraLuftschleier = c.Int(nullable: false),
-                        IRCamera_KameraStartFuegenNachIR = c.Int(nullable: false),
-                        IRCamera_KameraFehlerVrzNachIR = c.Int(nullable: false),
-                        DMXCheck_DayDifferenceSet = c.Int(nullable: false),
-                        DMXCheck_ActiveDMXCheck = c.Boolean(nullable: false),
-                        Ausgleichshub_Links = c.Double(nullable: false),
-                        Ausgleichshub_Rechts = c.Double(nullable: false),
+                        ToolCode = c.Int(nullable: false),
+                        ToolName = c.String(),
+                        AchsenStrom_Id = c.Int(),
+                        AktivierungN2Gas_Id = c.Int(),
+                        AktivierungSchritte_Id = c.Int(),
+                        AktivierungSontiges_Id = c.Int(),
+                        Ausgleichshub_Id = c.Int(),
+                        BursterDigiforceKraftWeg_Id = c.Int(),
+                        BursterDigiforceMinsdestkraft_Id = c.Int(),
+                        DMXCheck_Id = c.Int(),
+                        IRCamera_Id = c.Int(),
+                        Kennung_Id = c.Int(),
                         ParameterSchritte_Id = c.Int(),
+                        Zaehler_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.AchsenStromClasses", t => t.AchsenStrom_Id)
+                .ForeignKey("dbo.AktivierungN2GasClass", t => t.AktivierungN2Gas_Id)
+                .ForeignKey("dbo.AktivierungSchritteClasses", t => t.AktivierungSchritte_Id)
+                .ForeignKey("dbo.AktivierungSontigesClasses", t => t.AktivierungSontiges_Id)
+                .ForeignKey("dbo.Ausgleichshubs", t => t.Ausgleichshub_Id)
+                .ForeignKey("dbo.BursterDigiforceKraftWegClasses", t => t.BursterDigiforceKraftWeg_Id)
+                .ForeignKey("dbo.BursterDigiforceMinsdestkraftClasses", t => t.BursterDigiforceMinsdestkraft_Id)
+                .ForeignKey("dbo.DMXCheckClasses", t => t.DMXCheck_Id)
+                .ForeignKey("dbo.IRCameraClasses", t => t.IRCamera_Id)
+                .ForeignKey("dbo.KennungClasses", t => t.Kennung_Id)
                 .ForeignKey("dbo.ParameterSchritteClasses", t => t.ParameterSchritte_Id)
-                .Index(t => t.ParameterSchritte_Id);
+                .ForeignKey("dbo.ZaehlerClasses", t => t.Zaehler_Id)
+                .Index(t => t.AchsenStrom_Id)
+                .Index(t => t.AktivierungN2Gas_Id)
+                .Index(t => t.AktivierungSchritte_Id)
+                .Index(t => t.AktivierungSontiges_Id)
+                .Index(t => t.Ausgleichshub_Id)
+                .Index(t => t.BursterDigiforceKraftWeg_Id)
+                .Index(t => t.BursterDigiforceMinsdestkraft_Id)
+                .Index(t => t.DMXCheck_Id)
+                .Index(t => t.IRCamera_Id)
+                .Index(t => t.Kennung_Id)
+                .Index(t => t.ParameterSchritte_Id)
+                .Index(t => t.Zaehler_Id);
+            
+            CreateTable(
+                "dbo.AchsenStromClasses",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        FuegekraftMaxA1 = c.Short(nullable: false),
+                        FuegekraftMinA1 = c.Short(nullable: false),
+                        FuegekraftMaxA2 = c.Short(nullable: false),
+                        FuegekraftMinA2 = c.Short(nullable: false),
+                        Strommessung = c.Byte(nullable: false),
+                        FuegenStart = c.Short(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.AktivierungN2GasClass",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        N2G1 = c.Boolean(nullable: false),
+                        N2G2 = c.Boolean(nullable: false),
+                        N2G3 = c.Boolean(nullable: false),
+                        N2G4 = c.Boolean(nullable: false),
+                        Reserve5 = c.Boolean(nullable: false),
+                        Reserve6 = c.Boolean(nullable: false),
+                        Reserve7 = c.Boolean(nullable: false),
+                        Reserve8 = c.Boolean(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.AktivierungSchritteClasses",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        SpannenT1 = c.Boolean(nullable: false),
+                        SpannenT2 = c.Boolean(nullable: false),
+                        Abholtakt = c.Boolean(nullable: false),
+                        Prueftakt = c.Boolean(nullable: false),
+                        WarmVor = c.Boolean(nullable: false),
+                        WarmEnde = c.Boolean(nullable: false),
+                        Auswerfer = c.Boolean(nullable: false),
+                        Roboter = c.Boolean(nullable: false),
+                        Reserve4 = c.Boolean(nullable: false),
+                        Reserve5 = c.Boolean(nullable: false),
+                        Reserve6 = c.Boolean(nullable: false),
+                        Reserve7 = c.Boolean(nullable: false),
+                        Reserve8 = c.Boolean(nullable: false),
+                        Reserve9 = c.Boolean(nullable: false),
+                        StopNachFuegen = c.Boolean(nullable: false),
+                        OeffnenNachFuegen = c.Boolean(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.AktivierungSontigesClasses",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        ExternerE1 = c.Boolean(nullable: false),
+                        ExternerE2 = c.Boolean(nullable: false),
+                        ExternePruefung1 = c.Boolean(nullable: false),
+                        ExternePruefung2 = c.Boolean(nullable: false),
+                        OptionUmschaltung1 = c.Boolean(nullable: false),
+                        Reserve6 = c.Boolean(nullable: false),
+                        Reserve7 = c.Boolean(nullable: false),
+                        Reserve8 = c.Boolean(nullable: false),
+                        Reserve9 = c.Boolean(nullable: false),
+                        Reserve10 = c.Boolean(nullable: false),
+                        Reserve11 = c.Boolean(nullable: false),
+                        Reserve12 = c.Boolean(nullable: false),
+                        Reserve13 = c.Boolean(nullable: false),
+                        Reserve14 = c.Boolean(nullable: false),
+                        Reserve15 = c.Boolean(nullable: false),
+                        Reserve16 = c.Boolean(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.Ausgleichshubs",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Links = c.Double(nullable: false),
+                        Rechts = c.Double(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.BursterDigiforceKraftWegClasses",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        FuegewegKraftNest1 = c.Byte(nullable: false),
+                        FuegewegKraftNest2 = c.Byte(nullable: false),
+                        BursterProgrammNest1 = c.Short(nullable: false),
+                        BursterProgrammNest2 = c.Short(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.BursterDigiforceMinsdestkraftClasses",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        BursterMindestKraftAktiv = c.Boolean(nullable: false),
+                        MindestkraftSollNest1 = c.Single(nullable: false),
+                        MindestkraftToleranzPlusNest1 = c.Single(nullable: false),
+                        MindestkraftToleranzMinusNest1 = c.Single(nullable: false),
+                        MindestkraftSollNest2 = c.Single(nullable: false),
+                        MindestkraftToleranzPlusNest2 = c.Single(nullable: false),
+                        MindestkraftToleranzMinusNest2 = c.Single(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.DMXCheckClasses",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        DayDifferenceSet = c.Int(nullable: false),
+                        ActiveDMXCheck = c.Boolean(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.IRCameraClasses",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        KameraSchalter = c.Byte(nullable: false),
+                        KameraLuftschleier = c.Int(nullable: false),
+                        KameraStartFuegenNachIR = c.Int(nullable: false),
+                        KameraFehlerVrzNachIR = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.KennungClasses",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        ProgrammName = c.String(),
+                        RFIDHE = c.Byte(nullable: false),
+                        RFIDOB = c.Byte(nullable: false),
+                        RFIDUN = c.Byte(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
             
             CreateTable(
                 "dbo.ParameterSchritteClasses",
@@ -841,12 +984,23 @@
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        A1_VorPosition = c.Int(nullable: false),
-                        A1_EndPosition = c.Int(nullable: false),
-                        A1_Geschwindigkeit = c.Int(nullable: false),
-                        A2_VorPosition = c.Int(nullable: false),
-                        A2_EndPosition = c.Int(nullable: false),
-                        A2_Geschwindigkeit = c.Int(nullable: false),
+                        A1_Id = c.Int(),
+                        A2_Id = c.Int(),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.AbholAchseA1A2Class", t => t.A1_Id)
+                .ForeignKey("dbo.AbholAchseA1A2Class", t => t.A2_Id)
+                .Index(t => t.A1_Id)
+                .Index(t => t.A2_Id);
+            
+            CreateTable(
+                "dbo.AbholAchseA1A2Class",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        VorPosition = c.Int(nullable: false),
+                        EndPosition = c.Int(nullable: false),
+                        Geschwindigkeit = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -855,15 +1009,37 @@
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        A1_VorPosition = c.Int(nullable: false),
-                        A1_EndPosition = c.Int(nullable: false),
-                        A1_Geschwindigkeit = c.Int(nullable: false),
-                        A1_OeffnungswegNachFuegen = c.Int(nullable: false),
-                        A1_RueckhubGeschwingkeitFuegen = c.Int(nullable: false),
-                        A2_VorPosition = c.Int(nullable: false),
-                        A2_EndPosition = c.Int(nullable: false),
-                        A2_Geschwindigkeit = c.Int(nullable: false),
                         Kuehlzeit = c.Int(nullable: false),
+                        A1_Id = c.Int(),
+                        A2_Id = c.Int(),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.FuegeAchseA1Class", t => t.A1_Id)
+                .ForeignKey("dbo.FuegeAchseA2Class", t => t.A2_Id)
+                .Index(t => t.A1_Id)
+                .Index(t => t.A2_Id);
+            
+            CreateTable(
+                "dbo.FuegeAchseA1Class",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        VorPosition = c.Int(nullable: false),
+                        EndPosition = c.Int(nullable: false),
+                        Geschwindigkeit = c.Int(nullable: false),
+                        OeffnungswegNachFuegen = c.Int(nullable: false),
+                        RueckhubGeschwingkeitFuegen = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.FuegeAchseA2Class",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        VorPosition = c.Int(nullable: false),
+                        EndPosition = c.Int(nullable: false),
+                        Geschwindigkeit = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -872,10 +1048,22 @@
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        A1_Position = c.Int(nullable: false),
-                        A1_Geschwindigkeit = c.Int(nullable: false),
-                        A2_Position = c.Int(nullable: false),
-                        A2_Geschwindigkeit = c.Int(nullable: false),
+                        A1_Id = c.Int(),
+                        A2_Id = c.Int(),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.HEVorpositionAchseA1A2Class", t => t.A1_Id)
+                .ForeignKey("dbo.HEVorpositionAchseA1A2Class", t => t.A2_Id)
+                .Index(t => t.A1_Id)
+                .Index(t => t.A2_Id);
+            
+            CreateTable(
+                "dbo.HEVorpositionAchseA1A2Class",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Position = c.Int(nullable: false),
+                        Geschwindigkeit = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -884,8 +1072,19 @@
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        A1_Position = c.Int(nullable: false),
-                        A1_Geschwindigkeit = c.Int(nullable: false),
+                        A1_Id = c.Int(),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.SchmelzbildAchseA1Class", t => t.A1_Id)
+                .Index(t => t.A1_Id);
+            
+            CreateTable(
+                "dbo.SchmelzbildAchseA1Class",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Position = c.Int(nullable: false),
+                        Geschwindigkeit = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -894,12 +1093,35 @@
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        A1_Position = c.Int(nullable: false),
-                        A1_Geschwindigkeit = c.Int(nullable: false),
-                        A2_Position = c.Int(nullable: false),
-                        A2_Geschwindigkeit = c.Int(nullable: false),
-                        A3_Position = c.Int(nullable: false),
                         Zeit = c.Int(nullable: false),
+                        A1_Id = c.Int(),
+                        A2_Id = c.Int(),
+                        A3_Id = c.Int(),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Warm1AchseA1A2Class", t => t.A1_Id)
+                .ForeignKey("dbo.Warm1AchseA1A2Class", t => t.A2_Id)
+                .ForeignKey("dbo.Warm1AchseA3Class", t => t.A3_Id)
+                .Index(t => t.A1_Id)
+                .Index(t => t.A2_Id)
+                .Index(t => t.A3_Id);
+            
+            CreateTable(
+                "dbo.Warm1AchseA1A2Class",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Position = c.Int(nullable: false),
+                        Geschwindigkeit = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.Warm1AchseA3Class",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Position = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -908,11 +1130,34 @@
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        A1_Position = c.Int(nullable: false),
-                        A1_Geschwindigkeit = c.Int(nullable: false),
-                        A2_Position = c.Int(nullable: false),
-                        A2_Geschwindigkeit = c.Int(nullable: false),
                         Zeit = c.Int(nullable: false),
+                        A1_Id = c.Int(),
+                        A2_Id = c.Int(),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Warm2AchseA1A2Class", t => t.A1_Id)
+                .ForeignKey("dbo.Warm2AchseA1A2Class", t => t.A2_Id)
+                .Index(t => t.A1_Id)
+                .Index(t => t.A2_Id);
+            
+            CreateTable(
+                "dbo.Warm2AchseA1A2Class",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Position = c.Int(nullable: false),
+                        Geschwindigkeit = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.ZaehlerClasses",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        NIONF = c.Short(nullable: false),
+                        NIOVF = c.Short(nullable: false),
+                        Stueckzaehler = c.Short(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -922,13 +1167,36 @@
         {
             DropForeignKey("dbo.DatMWerkzeugs", "Recipe_Id", "dbo.Recipes");
             DropForeignKey("dbo.Recipes", "DatWerkzeugId", "dbo.DatWerkzeugs");
+            DropForeignKey("dbo.DatWerkzeugs", "Zaehler_Id", "dbo.ZaehlerClasses");
             DropForeignKey("dbo.DatWerkzeugs", "ParameterSchritte_Id", "dbo.ParameterSchritteClasses");
             DropForeignKey("dbo.ParameterSchritteClasses", "Warm2_Id", "dbo.Warm2SchrittClass");
+            DropForeignKey("dbo.Warm2SchrittClass", "A2_Id", "dbo.Warm2AchseA1A2Class");
+            DropForeignKey("dbo.Warm2SchrittClass", "A1_Id", "dbo.Warm2AchseA1A2Class");
             DropForeignKey("dbo.ParameterSchritteClasses", "Warm1_Id", "dbo.Warm1SchrittClass");
+            DropForeignKey("dbo.Warm1SchrittClass", "A3_Id", "dbo.Warm1AchseA3Class");
+            DropForeignKey("dbo.Warm1SchrittClass", "A2_Id", "dbo.Warm1AchseA1A2Class");
+            DropForeignKey("dbo.Warm1SchrittClass", "A1_Id", "dbo.Warm1AchseA1A2Class");
             DropForeignKey("dbo.ParameterSchritteClasses", "Schmelzbild_Id", "dbo.SchmelzbildSchrittClasses");
+            DropForeignKey("dbo.SchmelzbildSchrittClasses", "A1_Id", "dbo.SchmelzbildAchseA1Class");
             DropForeignKey("dbo.ParameterSchritteClasses", "HEVorposition_Id", "dbo.HEVorpositionSchrittClasses");
+            DropForeignKey("dbo.HEVorpositionSchrittClasses", "A2_Id", "dbo.HEVorpositionAchseA1A2Class");
+            DropForeignKey("dbo.HEVorpositionSchrittClasses", "A1_Id", "dbo.HEVorpositionAchseA1A2Class");
             DropForeignKey("dbo.ParameterSchritteClasses", "Fuege_Id", "dbo.FuegeSchrittClasses");
+            DropForeignKey("dbo.FuegeSchrittClasses", "A2_Id", "dbo.FuegeAchseA2Class");
+            DropForeignKey("dbo.FuegeSchrittClasses", "A1_Id", "dbo.FuegeAchseA1Class");
             DropForeignKey("dbo.ParameterSchritteClasses", "Abhol_Id", "dbo.AbholSchrittClasses");
+            DropForeignKey("dbo.AbholSchrittClasses", "A2_Id", "dbo.AbholAchseA1A2Class");
+            DropForeignKey("dbo.AbholSchrittClasses", "A1_Id", "dbo.AbholAchseA1A2Class");
+            DropForeignKey("dbo.DatWerkzeugs", "Kennung_Id", "dbo.KennungClasses");
+            DropForeignKey("dbo.DatWerkzeugs", "IRCamera_Id", "dbo.IRCameraClasses");
+            DropForeignKey("dbo.DatWerkzeugs", "DMXCheck_Id", "dbo.DMXCheckClasses");
+            DropForeignKey("dbo.DatWerkzeugs", "BursterDigiforceMinsdestkraft_Id", "dbo.BursterDigiforceMinsdestkraftClasses");
+            DropForeignKey("dbo.DatWerkzeugs", "BursterDigiforceKraftWeg_Id", "dbo.BursterDigiforceKraftWegClasses");
+            DropForeignKey("dbo.DatWerkzeugs", "Ausgleichshub_Id", "dbo.Ausgleichshubs");
+            DropForeignKey("dbo.DatWerkzeugs", "AktivierungSontiges_Id", "dbo.AktivierungSontigesClasses");
+            DropForeignKey("dbo.DatWerkzeugs", "AktivierungSchritte_Id", "dbo.AktivierungSchritteClasses");
+            DropForeignKey("dbo.DatWerkzeugs", "AktivierungN2Gas_Id", "dbo.AktivierungN2GasClass");
+            DropForeignKey("dbo.DatWerkzeugs", "AchsenStrom_Id", "dbo.AchsenStromClasses");
             DropForeignKey("dbo.Recipes", "DatN2Id", "dbo.DatN2");
             DropForeignKey("dbo.Recipes", "DatHEId", "dbo.DatHEs");
             DropForeignKey("dbo.Recipes", "DatConfigId", "dbo.DatConfigs");
@@ -937,8 +1205,12 @@
             DropForeignKey("dbo.DatConfigs", "WV_Id", "dbo.Schritts");
             DropForeignKey("dbo.DatConfigs", "WKZUN_Id", "dbo.WerkzeugConfigs");
             DropForeignKey("dbo.DatConfigs", "WKZOB_Id", "dbo.WerkzeugConfigs");
+            DropForeignKey("dbo.WerkzeugConfigs", "Time_Id", "dbo.TimeOfVentils");
+            DropForeignKey("dbo.WerkzeugConfigs", "Name_Id", "dbo.NameOfInputs");
             DropForeignKey("dbo.DatConfigs", "WE_Id", "dbo.Schritts");
             DropForeignKey("dbo.DatConfigs", "TK_Id", "dbo.Teilekontrolles");
+            DropForeignKey("dbo.Teilekontrolles", "UN_Id", "dbo.UDTConfigSchritts");
+            DropForeignKey("dbo.Teilekontrolles", "OB_Id", "dbo.UDTConfigSchritts");
             DropForeignKey("dbo.DatConfigs", "T2_Id", "dbo.Schritts");
             DropForeignKey("dbo.DatConfigs", "T1_Id", "dbo.Schritts");
             DropForeignKey("dbo.DatConfigs", "RO_Id", "dbo.Schritts");
@@ -950,18 +1222,53 @@
             DropForeignKey("dbo.DatConfigs", "AV_Id", "dbo.Schritts");
             DropForeignKey("dbo.DatConfigs", "AU_Id", "dbo.Schritts");
             DropForeignKey("dbo.DatConfigs", "AP_Id", "dbo.Schritts");
+            DropForeignKey("dbo.Schritts", "UN_IG_Id", "dbo.UDTConfigSchritts");
+            DropForeignKey("dbo.Schritts", "UN_Id", "dbo.UDTConfigSchritts");
+            DropForeignKey("dbo.Schritts", "OB_IG_Id", "dbo.UDTConfigSchritts");
+            DropForeignKey("dbo.Schritts", "OB_Id", "dbo.UDTConfigSchritts");
+            DropIndex("dbo.Warm2SchrittClass", new[] { "A2_Id" });
+            DropIndex("dbo.Warm2SchrittClass", new[] { "A1_Id" });
+            DropIndex("dbo.Warm1SchrittClass", new[] { "A3_Id" });
+            DropIndex("dbo.Warm1SchrittClass", new[] { "A2_Id" });
+            DropIndex("dbo.Warm1SchrittClass", new[] { "A1_Id" });
+            DropIndex("dbo.SchmelzbildSchrittClasses", new[] { "A1_Id" });
+            DropIndex("dbo.HEVorpositionSchrittClasses", new[] { "A2_Id" });
+            DropIndex("dbo.HEVorpositionSchrittClasses", new[] { "A1_Id" });
+            DropIndex("dbo.FuegeSchrittClasses", new[] { "A2_Id" });
+            DropIndex("dbo.FuegeSchrittClasses", new[] { "A1_Id" });
+            DropIndex("dbo.AbholSchrittClasses", new[] { "A2_Id" });
+            DropIndex("dbo.AbholSchrittClasses", new[] { "A1_Id" });
             DropIndex("dbo.ParameterSchritteClasses", new[] { "Warm2_Id" });
             DropIndex("dbo.ParameterSchritteClasses", new[] { "Warm1_Id" });
             DropIndex("dbo.ParameterSchritteClasses", new[] { "Schmelzbild_Id" });
             DropIndex("dbo.ParameterSchritteClasses", new[] { "HEVorposition_Id" });
             DropIndex("dbo.ParameterSchritteClasses", new[] { "Fuege_Id" });
             DropIndex("dbo.ParameterSchritteClasses", new[] { "Abhol_Id" });
+            DropIndex("dbo.DatWerkzeugs", new[] { "Zaehler_Id" });
             DropIndex("dbo.DatWerkzeugs", new[] { "ParameterSchritte_Id" });
+            DropIndex("dbo.DatWerkzeugs", new[] { "Kennung_Id" });
+            DropIndex("dbo.DatWerkzeugs", new[] { "IRCamera_Id" });
+            DropIndex("dbo.DatWerkzeugs", new[] { "DMXCheck_Id" });
+            DropIndex("dbo.DatWerkzeugs", new[] { "BursterDigiforceMinsdestkraft_Id" });
+            DropIndex("dbo.DatWerkzeugs", new[] { "BursterDigiforceKraftWeg_Id" });
+            DropIndex("dbo.DatWerkzeugs", new[] { "Ausgleichshub_Id" });
+            DropIndex("dbo.DatWerkzeugs", new[] { "AktivierungSontiges_Id" });
+            DropIndex("dbo.DatWerkzeugs", new[] { "AktivierungSchritte_Id" });
+            DropIndex("dbo.DatWerkzeugs", new[] { "AktivierungN2Gas_Id" });
+            DropIndex("dbo.DatWerkzeugs", new[] { "AchsenStrom_Id" });
             DropIndex("dbo.Recipes", new[] { "DatWerkzeugId" });
             DropIndex("dbo.Recipes", new[] { "DatN2Id" });
             DropIndex("dbo.Recipes", new[] { "DatConfigId" });
             DropIndex("dbo.Recipes", new[] { "DatHEId" });
             DropIndex("dbo.DatMWerkzeugs", new[] { "Recipe_Id" });
+            DropIndex("dbo.WerkzeugConfigs", new[] { "Time_Id" });
+            DropIndex("dbo.WerkzeugConfigs", new[] { "Name_Id" });
+            DropIndex("dbo.Teilekontrolles", new[] { "UN_Id" });
+            DropIndex("dbo.Teilekontrolles", new[] { "OB_Id" });
+            DropIndex("dbo.Schritts", new[] { "UN_IG_Id" });
+            DropIndex("dbo.Schritts", new[] { "UN_Id" });
+            DropIndex("dbo.Schritts", new[] { "OB_IG_Id" });
+            DropIndex("dbo.Schritts", new[] { "OB_Id" });
             DropIndex("dbo.DatConfigs", new[] { "ZYE_Id" });
             DropIndex("dbo.DatConfigs", new[] { "ZYA_Id" });
             DropIndex("dbo.DatConfigs", new[] { "WV_Id" });
@@ -980,20 +1287,42 @@
             DropIndex("dbo.DatConfigs", new[] { "AV_Id" });
             DropIndex("dbo.DatConfigs", new[] { "AU_Id" });
             DropIndex("dbo.DatConfigs", new[] { "AP_Id" });
+            DropTable("dbo.ZaehlerClasses");
+            DropTable("dbo.Warm2AchseA1A2Class");
             DropTable("dbo.Warm2SchrittClass");
+            DropTable("dbo.Warm1AchseA3Class");
+            DropTable("dbo.Warm1AchseA1A2Class");
             DropTable("dbo.Warm1SchrittClass");
+            DropTable("dbo.SchmelzbildAchseA1Class");
             DropTable("dbo.SchmelzbildSchrittClasses");
+            DropTable("dbo.HEVorpositionAchseA1A2Class");
             DropTable("dbo.HEVorpositionSchrittClasses");
+            DropTable("dbo.FuegeAchseA2Class");
+            DropTable("dbo.FuegeAchseA1Class");
             DropTable("dbo.FuegeSchrittClasses");
+            DropTable("dbo.AbholAchseA1A2Class");
             DropTable("dbo.AbholSchrittClasses");
             DropTable("dbo.ParameterSchritteClasses");
+            DropTable("dbo.KennungClasses");
+            DropTable("dbo.IRCameraClasses");
+            DropTable("dbo.DMXCheckClasses");
+            DropTable("dbo.BursterDigiforceMinsdestkraftClasses");
+            DropTable("dbo.BursterDigiforceKraftWegClasses");
+            DropTable("dbo.Ausgleichshubs");
+            DropTable("dbo.AktivierungSontigesClasses");
+            DropTable("dbo.AktivierungSchritteClasses");
+            DropTable("dbo.AktivierungN2GasClass");
+            DropTable("dbo.AchsenStromClasses");
             DropTable("dbo.DatWerkzeugs");
             DropTable("dbo.DatN2");
             DropTable("dbo.Recipes");
             DropTable("dbo.DatMWerkzeugs");
             DropTable("dbo.DatHEs");
+            DropTable("dbo.TimeOfVentils");
+            DropTable("dbo.NameOfInputs");
             DropTable("dbo.WerkzeugConfigs");
             DropTable("dbo.Teilekontrolles");
+            DropTable("dbo.UDTConfigSchritts");
             DropTable("dbo.Schritts");
             DropTable("dbo.DatConfigs");
         }
