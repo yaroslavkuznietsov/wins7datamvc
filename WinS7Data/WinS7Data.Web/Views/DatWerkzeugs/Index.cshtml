@@ -26,6 +26,39 @@
         <th>
             @Html.DisplayNameFor(model => model.Kennung.RFIDUN)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AktivierungSchritte)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ParameterSchritte)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AchsenStrom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Zaehler)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AktivierungN2Gas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AktivierungSontiges)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BursterDigiforceKraftWeg)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BursterDigiforceMinsdestkraft)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IRCamera)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DMXCheck)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ausgleichshub)
+        </th>
         @*<th></th>*@
     </tr>
 
@@ -34,7 +67,7 @@
     <td>
         @Html.DisplayFor(modelItem => item.ToolCode)
     </td>
-    <td>
+    <td style="white-space:nowrap">
         @Html.DisplayFor(modelItem => item.ToolName)
     </td>
     <td>
@@ -45,6 +78,39 @@
     </td>
     <td>
         @Html.DisplayFor(modelItem => item.Kennung.RFIDUN)
+    </td>
+    <td>
+        @Html.Partial("_2_0_AktivierungSchritte", item.AktivierungSchritte)
+    </td>
+    <td>
+        @Html.Partial("_3_0_ParameterSchritteClass", item.ParameterSchritte)
+    </td>
+    <td>
+        @Html.Partial("_4_0_AchsenStromClass", item.AchsenStrom)
+    </td>
+    <td>
+        @Html.Partial("_5_0_ZaehlerClass", item.Zaehler)
+    </td>
+    <td>
+        @Html.Partial("_6_0_AktivierungN2GasClass", item.AktivierungN2Gas)
+    </td>
+    <td>
+        @Html.Partial("_7_0_AktivierungSontigesClass", item.AktivierungSontiges)
+    </td>
+    <td>
+        @Html.Partial("_8_0_BursterDigiforceKraftWegClass", item.BursterDigiforceKraftWeg)
+    </td>
+    <td>
+        @Html.Partial("_9_0_BursterDigiforceMinsdestkraftClass", item.BursterDigiforceMinsdestkraft)
+    </td>
+    <td>
+        @Html.Partial("_10_0_IRCameraClass", item.IRCamera)
+    </td>
+    <td>
+        @Html.Partial("_11_0_DMXCheckClass", item.DMXCheck)
+    </td>
+    <td>
+        @Html.Partial("_12_0_Ausgleichshub", item.Ausgleichshub)
     </td>
     @*<td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |

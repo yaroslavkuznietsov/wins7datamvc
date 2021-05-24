@@ -267,6 +267,31 @@
     <Content Include="Views\DatWerkzeugs\Details.cshtml" />
     <Content Include="Views\DatWerkzeugs\Edit.cshtml" />
     <Content Include="Views\DatWerkzeugs\Index.cshtml" />
+    <Content Include="Views\DatWerkzeugs\_3_0_ParameterSchritteClass.cshtml" />
+    <Content Include="Views\DatWerkzeugs\_3_1_AbholSchrittClass.cshtml" />
+    <Content Include="Views\DatWerkzeugs\_2_0_AktivierungSchritte.cshtml" />
+    <Content Include="Views\DatWerkzeugs\_3_1_x1_AbholAchseA1A2Class.cshtml" />
+    <Content Include="Views\DatWerkzeugs\_3_2_HeVorpositionSchrittClass.cshtml" />
+    <Content Include="Views\DatWerkzeugs\_3_6_x1_SchmelzbildAchseA1Class.cshtml" />
+    <Content Include="Views\DatWerkzeugs\_3_3_Warm1SchrittClass.cshtml" />
+    <Content Include="Views\DatWerkzeugs\_3_3_x1_Warm1AchseA1A2Class.cshtml" />
+    <Content Include="Views\DatWerkzeugs\_3_3_x3_Warm1AchseA3Class.cshtml" />
+    <Content Include="Views\DatWerkzeugs\_3_4_Warm2SchrittClass.cshtml" />
+    <Content Include="Views\DatWerkzeugs\_3_4_x1_Warm2AchseA1A2Class.cshtml" />
+    <Content Include="Views\DatWerkzeugs\_3_5_FuegeSchrittClass.cshtml" />
+    <Content Include="Views\DatWerkzeugs\_3_5_x1_FuegeAchseA1Class.cshtml" />
+    <Content Include="Views\DatWerkzeugs\_3_5_x2_FuegeAchseA2Class.cshtml" />
+    <Content Include="Views\DatWerkzeugs\_3_6_SchmelzbildSchrittClass.cshtml" />
+    <Content Include="Views\DatWerkzeugs\_3_2_x1_HEVorpositionAchseA1A2Class.cshtml" />
+    <Content Include="Views\DatWerkzeugs\_4_0_AchsenStromClass.cshtml" />
+    <Content Include="Views\DatWerkzeugs\_5_0_ZaehlerClass.cshtml" />
+    <Content Include="Views\DatWerkzeugs\_6_0_AktivierungN2GasClass.cshtml" />
+    <Content Include="Views\DatWerkzeugs\_7_0_AktivierungSontigesClass.cshtml" />
+    <Content Include="Views\DatWerkzeugs\_8_0_BursterDigiforceKraftWegClass.cshtml" />
+    <Content Include="Views\DatWerkzeugs\_9_0_BursterDigiforceMinsdestkraftClass.cshtml" />
+    <Content Include="Views\DatWerkzeugs\_10_0_IRCameraClass.cshtml" />
+    <Content Include="Views\DatWerkzeugs\_11_0_DMXCheckClass.cshtml" />
+    <Content Include="Views\DatWerkzeugs\_12_0_Ausgleichshub.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,53 @@
+﻿@model WinS7Data.DataLibrary.Models.AchsenStromClass
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FuegekraftMaxA1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FuegekraftMinA1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FuegekraftMaxA2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FuegekraftMinA2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Strommessung)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FuegenStart)
+        </th>
+        <th></th>
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => Model.FuegekraftMaxA1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.FuegekraftMinA1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.FuegekraftMaxA2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.FuegekraftMinA2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.Strommessung)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.FuegenStart)
+        </td>
+        @*<td>
+            @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=Model.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=Model.Id })
+        </td>*@
+    </tr>
+</table>
