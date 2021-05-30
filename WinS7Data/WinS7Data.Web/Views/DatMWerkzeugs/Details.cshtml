@@ -1,0 +1,122 @@
+﻿@model WinS7Data.DataLibrary.Models.DatMWerkzeug
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DatMWerkzeug</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ToolCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ToolCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ToolName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ToolName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MachineId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MachineId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WerkzeughoeheA1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WerkzeughoeheA1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WerkzeughoeheA2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WerkzeughoeheA2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HeizelementhoeheObenA3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HeizelementhoeheObenA3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HeizelementhoeheUntenA3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HeizelementhoeheUntenA3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WarmpositionA3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WarmpositionA3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BestueckungspositionA1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BestueckungspositionA1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BestueckungspositionA2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BestueckungspositionA2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PruefpositionA1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PruefpositionA1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PruefpositionA2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PruefpositionA2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IRKameraTriggerpositionA3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IRKameraTriggerpositionA3)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

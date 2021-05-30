@@ -1,0 +1,111 @@
+﻿@model IEnumerable<List<WinS7Data.DataLibrary.Models.DatMWerkzeug>>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+<table class="table">
+    <tr>
+        @for (int i = 0; i < Model.FirstOrDefault().Count; i++)
+        {
+            <th>
+                @Html.DisplayNameFor(model => model[i].ToolCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[i].ToolName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[i].MachineId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[i].WerkzeughoeheA1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[i].WerkzeughoeheA2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[i].HeizelementhoeheObenA3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[i].HeizelementhoeheUntenA3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[i].WarmpositionA3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[i].BestueckungspositionA1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[i].BestueckungspositionA2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[i].PruefpositionA1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[i].PruefpositionA2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[i].IRKameraTriggerpositionA3)
+            </th>
+            @*<th></th>*@
+        }
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        @for (int i = 0; i < item.Count; i++)
+        {
+            <td>
+                @Html.DisplayFor(modelItem => item[i].ToolCode)
+            </td>
+            <td style="white-space:nowrap">
+                @Html.DisplayFor(modelItem => item[i].ToolName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item[i].MachineId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item[i].WerkzeughoeheA1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item[i].WerkzeughoeheA2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item[i].HeizelementhoeheObenA3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item[i].HeizelementhoeheUntenA3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item[i].WarmpositionA3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item[i].BestueckungspositionA1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item[i].BestueckungspositionA2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item[i].PruefpositionA1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item[i].PruefpositionA2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item[i].IRKameraTriggerpositionA3)
+            </td>
+            @*<td>
+                @Html.ActionLink("Edit", "Edit", new { id = item[i].Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item[i].Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item[i].Id })
+            </td>*@
+        }
+    </tr>
+}
+
+</table>

@@ -106,7 +106,7 @@ namespace WinS7Data.DataModel
         List<DatConfig> configs = new List<DatConfig>();
         List<DatN2> n2s = new List<DatN2>();
         List<DatWerkzeug> werkzeugs = new List<DatWerkzeug>();
-        List<DatMWerkzeug> mwerkzeugs = new List<DatMWerkzeug>();
+        List<List<DatMWerkzeug>> mwerkzeugsList = new List<List<DatMWerkzeug>>();
 
         public List<DatHE> GetAllDatHEs()
         {
@@ -131,6 +131,11 @@ namespace WinS7Data.DataModel
             return werkzeugs;
         }
 
+        public List<List<DatMWerkzeug>> GetAllDatMWerkzeugs()
+        {
+            GetAllRecipes();
+            return mwerkzeugsList;
+        }
 
         public void GetAllRecipes()
         {
@@ -142,10 +147,11 @@ namespace WinS7Data.DataModel
                 configs.Add(recipe.DatConfig);
                 n2s.Add(recipe.DatN2);
                 werkzeugs.Add(recipe.DatWerkzeug);
-                foreach (var mwerkzeug in recipe.DatMWerkzeugs)
-                {
-                    mwerkzeugs.Add(mwerkzeug);
-                }
+                mwerkzeugsList.Add(recipe.DatMWerkzeugs);
+                //foreach (var mwerkzeug in recipe.DatMWerkzeugs)
+                //{
+                //    mwerkzeugs.Add(mwerkzeug);
+                //}
 
             }
         }

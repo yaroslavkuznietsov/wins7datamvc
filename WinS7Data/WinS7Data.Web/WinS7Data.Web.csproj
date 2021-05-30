@@ -170,6 +170,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\DatConfigsController.cs" />
     <Compile Include="Controllers\DatHEsController.cs" />
+    <Compile Include="Controllers\DatMWerkzeugsController.cs" />
     <Compile Include="Controllers\DatN2sController.cs" />
     <Compile Include="Controllers\DatWerkzeugsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -292,6 +293,11 @@
     <Content Include="Views\DatWerkzeugs\_10_0_IRCameraClass.cshtml" />
     <Content Include="Views\DatWerkzeugs\_11_0_DMXCheckClass.cshtml" />
     <Content Include="Views\DatWerkzeugs\_12_0_Ausgleichshub.cshtml" />
+    <Content Include="Views\DatMWerkzeugs\Create.cshtml" />
+    <Content Include="Views\DatMWerkzeugs\Delete.cshtml" />
+    <Content Include="Views\DatMWerkzeugs\Details.cshtml" />
+    <Content Include="Views\DatMWerkzeugs\Edit.cshtml" />
+    <Content Include="Views\DatMWerkzeugs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
