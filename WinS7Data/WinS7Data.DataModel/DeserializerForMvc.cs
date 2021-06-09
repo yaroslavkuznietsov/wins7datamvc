@@ -394,8 +394,11 @@ namespace WinS7Data.DataModel
 
         public static List<Recipe> GetRecipesFromFolder()
         {
+            string startupPath = Path.GetDirectoryName(AppDomain.CurrentDomain.BaseDirectory);
+            string recipesRoot = startupPath + @"\\Recipes";
+            //string recipesRoot = @"E:\Recipes";
             string[] subdirectories;
-            subdirectories = GetSubDirectories(@"E:\Recipes");
+            subdirectories = GetSubDirectories(recipesRoot);
 
             List<Recipe> recipes = DeserializeRecipes(subdirectories);
 
