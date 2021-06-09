@@ -20,10 +20,17 @@ namespace WinS7Data.Web
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js"));
+                "~/Scripts/jquery.fixedheadertable.js",
+                "~/Scripts/bootstrap.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/fixedheadertable").Include(
+                      "~/Scripts/jquery.fixedheadertable.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/defaultTheme.css",
+                      "~/Content/demo.css",
+                      "~/Content/960.css",
                       "~/Content/site.css"));
         }
     }

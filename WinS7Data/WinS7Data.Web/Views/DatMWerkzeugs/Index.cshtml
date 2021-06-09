@@ -7,105 +7,341 @@
 <h2>Index</h2>
 
 @*<p>
-    @Html.ActionLink("Create New", "Create")
-</p>*@
-<table class="table">
-    <tr>
-        @for (int i = 0; i < Model.FirstOrDefault().Count; i++)
-        {
-            <th>
-                @Html.DisplayNameFor(model => model[i].ToolCode)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model[i].ToolName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model[i].MachineId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model[i].WerkzeughoeheA1)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model[i].WerkzeughoeheA2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model[i].HeizelementhoeheObenA3)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model[i].HeizelementhoeheUntenA3)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model[i].WarmpositionA3)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model[i].BestueckungspositionA1)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model[i].BestueckungspositionA2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model[i].PruefpositionA1)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model[i].PruefpositionA2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model[i].IRKameraTriggerpositionA3)
-            </th>
-            @*<th></th>*@
-        }
-    </tr>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
 
-@foreach (var item in Model) {
-    <tr>
-        @for (int i = 0; i < item.Count; i++)
-        {
-            <td>
-                @Html.DisplayFor(modelItem => item[i].ToolCode)
-            </td>
-            <td style="white-space:nowrap">
-                @Html.DisplayFor(modelItem => item[i].ToolName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item[i].MachineId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item[i].WerkzeughoeheA1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item[i].WerkzeughoeheA2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item[i].HeizelementhoeheObenA3)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item[i].HeizelementhoeheUntenA3)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item[i].WarmpositionA3)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item[i].BestueckungspositionA1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item[i].BestueckungspositionA2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item[i].PruefpositionA1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item[i].PruefpositionA2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item[i].IRKameraTriggerpositionA3)
-            </td>
-            @*<td>
-                @Html.ActionLink("Edit", "Edit", new { id = item[i].Id }) |
-                @Html.ActionLink("Details", "Details", new { id = item[i].Id }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item[i].Id })
-            </td>*@
-        }
-    </tr>
+
+<div class="container_12">
+    <div id="tablePlaceholder" class="grid_12 alpha omega">
+        <table>
+            <thead>
+                <tr>
+                    @for (int i = 0; i < Model.FirstOrDefault().Count; i++)
+                    {
+                        <th>
+                            @Html.DisplayNameFor(model => model[i].ToolCode)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model[i].ToolName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model[i].MachineId)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model[i].WerkzeughoeheA1)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model[i].WerkzeughoeheA2)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model[i].HeizelementhoeheObenA3)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model[i].HeizelementhoeheUntenA3)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model[i].WarmpositionA3)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model[i].BestueckungspositionA1)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model[i].BestueckungspositionA2)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model[i].PruefpositionA1)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model[i].PruefpositionA2)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model[i].IRKameraTriggerpositionA3)
+                        </th>
+                        @*<th></th>*@
+                    }
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        @for (int i = 0; i < item.Count; i++)
+                        {
+                            <td>
+                                @Html.DisplayFor(modelItem => item[i].ToolCode)
+                            </td>
+                            <td style="white-space:nowrap">
+                                @Html.DisplayFor(modelItem => item[i].ToolName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item[i].MachineId)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item[i].WerkzeughoeheA1)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item[i].WerkzeughoeheA2)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item[i].HeizelementhoeheObenA3)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item[i].HeizelementhoeheUntenA3)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item[i].WarmpositionA3)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item[i].BestueckungspositionA1)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item[i].BestueckungspositionA2)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item[i].PruefpositionA1)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item[i].PruefpositionA2)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item[i].IRKameraTriggerpositionA3)
+                            </td>
+                            @*<td>
+                                    @Html.ActionLink("Edit", "Edit", new { id = item[i].Id }) |
+                                    @Html.ActionLink("Details", "Details", new { id = item[i].Id }) |
+                                    @Html.ActionLink("Delete", "Delete", new { id = item[i].Id })
+                                </td>*@
+                        }
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="container_16 table_options">
+    @*<div class="grid_3 prefix_1 alpha">
+            <h2>Table Properties</h2>
+            <fieldset>
+                <label for="rows">rows</label>
+                <input id="rows" type="text" value="" />
+            </fieldset>
+            <fieldset>
+                <label for="columns">columns</label>
+                <input id="columns" type="text" value="" />
+            </fieldset>
+        </div>
+
+        <div class="grid_4">
+            <h2>Table Appearance</h2>
+            <fieldset>
+                <label for="borderWidth">border-width</label>
+                <input id="borderWidth" type="text" value="" placeholder="ex. 1px" />
+            </fieldset>
+            <fieldset>
+                <label for="borderColor">border-color</label>
+                <input id="borderColor" type="text" value="" placeholder="ex. #353535" />
+            </fieldset>
+        </div>
+
+        <div class="grid_3">
+            <h2>&nbsp;</h2>
+            <fieldset>
+                <label for="padding">padding</label>
+                <input id="padding" type="text" value="" placeholder="ex. 5" />
+            </fieldset>
+        </div>*@
+
+    <div class="grid_2 prefix_2 omega">
+        @*<a id="buildTable" class="button" href="#">Build Table</a>*@
+        <a id="runPlugin" class="button" href="#">Run Plugin</a>
+    </div>
+</div>
+<!-- #region name -->
+@*<div class="container_12">
+        <div id="tablePlaceholder" class="grid_12 alpha omega">
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model[0].ToolCode)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model[0].ToolName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model[0].MachineId)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model[0].WerkzeughoeheA1)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model[0].WerkzeughoeheA2)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model[0].HeizelementhoeheObenA3)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model[0].HeizelementhoeheUntenA3)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model[0].WarmpositionA3)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model[0].BestueckungspositionA1)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model[0].BestueckungspositionA2)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model[0].PruefpositionA1)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model[0].PruefpositionA2)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model[0].IRKameraTriggerpositionA3)
+                        </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => Model.FirstOrDefault().FirstOrDefault().ToolCode)
+                            </td>
+                            <td style="white-space:nowrap">
+                                @Html.DisplayFor(modelItem => Model.FirstOrDefault().FirstOrDefault().ToolName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => Model.FirstOrDefault().FirstOrDefault().MachineId)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => Model.FirstOrDefault().FirstOrDefault().WerkzeughoeheA1)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => Model.FirstOrDefault().FirstOrDefault().WerkzeughoeheA2)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => Model.FirstOrDefault().FirstOrDefault().HeizelementhoeheObenA3)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => Model.FirstOrDefault().FirstOrDefault().HeizelementhoeheUntenA3)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => Model.FirstOrDefault().FirstOrDefault().WarmpositionA3)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => Model.FirstOrDefault().FirstOrDefault().BestueckungspositionA1)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => Model.FirstOrDefault().FirstOrDefault().BestueckungspositionA2)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => Model.FirstOrDefault().FirstOrDefault().PruefpositionA1)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => Model.FirstOrDefault().FirstOrDefault().PruefpositionA2)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => Model.FirstOrDefault().FirstOrDefault().IRKameraTriggerpositionA3)
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>*@
+
+
+
+<!-- #endregion -->
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/fixedheadertable")
+    <script>
+        $(document).ready(function () {
+            $('#buildTable').bind('click', function (e) {
+                e.preventDefault();
+
+                $('#tablePlaceholder').empty()
+                    .buildTable();
+            });
+
+            /*2021-06-07 YK: Script call after table was builded*/
+            $('#tablePlaceholder table').fixedHeaderTable({ height: '800', width: '1200', altClass: 'odd', themeClass: 'fancyDarkTable', fixedColumns: 2 });
+
+            $('#runPlugin').bind('click', function (e) {
+                e.preventDefault();
+
+                $('#tablePlaceholder table').fixedHeaderTable({ height: '800', width: '1200',altClass: 'odd', themeClass: 'fancyDarkTable', fixedColumns: 2 });
+            });
+        });
+
+        $.fn.extend({
+            buildTable: function () {
+                var defaults = {
+                    width: '100%',
+                    height: 400,
+                    rows: 100,
+                    columns: 5,
+                    borderWidth: 1,
+                    borderColor: '#000000',
+                    padding: 5
+                };
+
+                console.log(123);
+
+                var $self = $(this),
+                    self = this,
+                    rows = $('#rows').val(),
+                    columns = $('#columns').val(),
+                    borderWidth = $('#borderWidth').val(),
+                    borderColor = $('#borderColor').val(),
+                    padding = $('#padding').val(),
+                    $thead,
+                    $tbody,
+                    $currentRow,
+                    $styles,
+                    options = {};
+
+                if (padding != '') {
+                    options.padding = padding;
+                }
+
+                options = $.extend({}, defaults, options);
+
+                $self.append('<table><thead></thead><tbody></tbody></table>');
+
+                $thead = $self.find('thead');
+                $thead.append('<tr></tr>');
+                for (var column = 1; column <= columns; column++) {
+                    $thead.find('tr')
+                        .append('<th>Column ' + column + '</th>');
+                }
+
+                $tbody = $self.find('tbody');
+                for (var row = 1; row <= rows; row++) {
+                    $currentRow = $('<tr></tr>').appendTo($tbody);
+
+                    for (var column = 1; column <= columns; column++) {
+                        $currentRow.append('<td>Column ' + column + '</td>');
+                    }
+                }
+
+                /*
+                        var paddingStyle = "padding: " + options.padding + "px !important;";
+
+                        $styles = $('<style></style>').appendTo('.styles');
+
+                        $styles.html('th, td { '+paddingStyle+' }');
+                */
+            }
+        });
+    </script>
 }
-
-</table>
