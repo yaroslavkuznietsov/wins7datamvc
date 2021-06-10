@@ -251,13 +251,11 @@
     <Content Include="Views\DatHEs\Details.cshtml" />
     <Content Include="Views\DatHEs\Edit.cshtml" />
     <Content Include="Views\DatHEs\Index.cshtml" />
-    <Content Include="Views\Shared\_HK.cshtml" />
     <Content Include="Views\DatN2s\Create.cshtml" />
     <Content Include="Views\DatN2s\Delete.cshtml" />
     <Content Include="Views\DatN2s\Details.cshtml" />
     <Content Include="Views\DatN2s\Edit.cshtml" />
     <Content Include="Views\DatN2s\Index.cshtml" />
-    <Content Include="Views\Shared\_PV.cshtml" />
     <Content Include="Views\DatConfigs\Create.cshtml" />
     <Content Include="Views\DatConfigs\Delete.cshtml" />
     <Content Include="Views\DatConfigs\Details.cshtml" />
@@ -304,6 +302,8 @@
     <Content Include="Views\DatMWerkzeugs\Details.cshtml" />
     <Content Include="Views\DatMWerkzeugs\Edit.cshtml" />
     <Content Include="Views\DatMWerkzeugs\Index.cshtml" />
+    <Content Include="Views\DatHEs\_HK.cshtml" />
+    <Content Include="Views\DatN2s\_PV.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
