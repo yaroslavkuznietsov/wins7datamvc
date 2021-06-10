@@ -1,47 +1,77 @@
 ﻿@model WinS7Data.DataLibrary.Models.UDTConfigSchritt
 
 @*<p>
-    @Html.ActionLink("Create New", "Create")
-</p>*@
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.E_01_16)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.E_17_32)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.E_Vakuum)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.A_Vakuum)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.A_Ventile_1_8)
-        </th>
-        @*<th></th>*@
-    </tr>
-    <tr>
-        <td>
-            @Html.DisplayFor(model => model.E_01_16)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.E_17_32)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.E_Vakuum)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.A_Vakuum)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.A_Ventile_1_8)
-        </td>
-        @*<td>
-            @Html.ActionLink("Edit", "Edit", new { id= Model.Id }) |
-            @Html.ActionLink("Details", "Details", new { id= Model.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id= Model.Id })
-        </td>*@
-    </tr>
-</table>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+
+
+<ul>
+    <li style="white-space:nowrap">@Html.DisplayNameFor(model => model.E_01_16) : @Html.DisplayFor(model => model.E_01_16)</li>
+    <li style="white-space:nowrap">@Html.DisplayNameFor(model => model.E_17_32) : @Html.DisplayFor(model => model.E_17_32)</li>
+    <li style="white-space:nowrap">@Html.DisplayNameFor(model => model.E_Vakuum) : @Html.DisplayFor(model => model.E_Vakuum)</li>
+    <li style="white-space:nowrap">@Html.DisplayNameFor(model => model.A_Vakuum) : @Html.DisplayFor(model => model.A_Vakuum)</li>
+    <li style="white-space:nowrap">@Html.DisplayNameFor(model => model.A_Ventile_1_8) : @Html.DisplayFor(model => model.A_Ventile_1_8)</li>
+</ul>
+
+
+@*<ul class="list-inline">
+        <li style="white-space:nowrap">@Html.DisplayNameFor(model => model.E_01_16)</li>
+        <li style="white-space:nowrap">@Html.DisplayNameFor(model => model.E_17_32)</li>
+        <li style="white-space:nowrap">@Html.DisplayNameFor(model => model.E_Vakuum)</li>
+        <li style="white-space:nowrap">@Html.DisplayNameFor(model => model.A_Vakuum)</li>
+        <li style="white-space:nowrap">@Html.DisplayNameFor(model => model.A_Ventile_1_8)</li>
+    </ul>
+    <ul class="list-inline">
+        <li style="white-space:nowrap">@Html.DisplayFor(model => model.E_01_16)</li>
+        <li style="white-space:nowrap">@Html.DisplayFor(model => model.E_17_32)</li>
+        <li style="white-space:nowrap">@Html.DisplayFor(model => model.E_Vakuum)</li>
+        <li style="white-space:nowrap">@Html.DisplayFor(model => model.A_Vakuum)</li>
+        <li style="white-space:nowrap">@Html.DisplayFor(model => model.A_Ventile_1_8)</li>
+    </ul>*@
+
+
+<!-- #region table variant -->
+@*<table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.E_01_16)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.E_17_32)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.E_Vakuum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.A_Vakuum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.A_Ventile_1_8)
+            </th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.E_01_16)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.E_17_32)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.E_Vakuum)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.A_Vakuum)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.A_Ventile_1_8)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id= Model.Id }) |
+                @Html.ActionLink("Details", "Details", new { id= Model.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id= Model.Id })
+            </td>
+        </tr>
+    </table>*@
+
+<!-- #endregion -->

@@ -95,7 +95,7 @@ namespace WinS7Data.DataLibrary.Models
         public Propventil Propventil37 { get; set; } = new Propventil();
         [Display(Name = "PV38")]
         public Propventil Propventil38 { get; set; } = new Propventil();
-        [Display(Name = "PV31")]
+        [Display(Name = "PV39")]
         public Propventil Propventil39 { get; set; } = new Propventil();
         [Display(Name = "PV40")]
         public Propventil Propventil40 { get; set; } = new Propventil();

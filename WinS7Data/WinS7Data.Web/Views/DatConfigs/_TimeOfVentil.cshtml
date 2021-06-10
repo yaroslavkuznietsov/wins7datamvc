@@ -1,113 +1,219 @@
 ﻿@model WinS7Data.DataLibrary.Models.TimeOfVentil
 
 @*<p>
-    @Html.ActionLink("Create New", "Create")
-</p>*@
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.TVO121)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TVO141)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TVO122)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TVO142)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TVO123)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TVO143)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TVO124)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TVO144)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TVO125)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TVO145)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TVO126)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TVO146)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TVO127)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TVO147)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TVO128)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TVO148)
-        </th>
-        @*<th></th>*@
-    </tr>
-    <tr>
-        <td>
-            @Html.DisplayFor(model => model.TVO121)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.TVO141)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.TVO122)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.TVO142)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.TVO123)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.TVO143)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.TVO124)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.TVO144)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.TVO125)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.TVO145)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.TVO126)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.TVO146)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.TVO127)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.TVO147)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.TVO128)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.TVO148)
-        </td>
-        @*<td>
-            @Html.ActionLink("Edit", "Edit", new { id=model.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=model.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=model.Id })
-        </td>*@
-    </tr>
-</table>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+
+
+<ul class="list-inline">
+    <li>
+        <ul>
+            <li style="text-align:center;">@Html.DisplayNameFor(model => model.TVO121)</li>
+            <li style="list-style-type:none; width:100px;">@Html.DisplayFor(model => model.TVO121)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align:center;">@Html.DisplayNameFor(model => model.TVO141)</li>
+            <li style="list-style-type:none; width:100px;">@Html.DisplayFor(model => model.TVO141)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align:center;">@Html.DisplayNameFor(model => model.TVO122)</li>
+            <li style="list-style-type:none; width:100px;">@Html.DisplayFor(model => model.TVO122)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align:center;">@Html.DisplayNameFor(model => model.TVO142)</li>
+            <li style="list-style-type:none; width:100px;">@Html.DisplayFor(model => model.TVO142)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align:center;">@Html.DisplayNameFor(model => model.TVO123)</li>
+            <li style="list-style-type:none; width:100px;">@Html.DisplayFor(model => model.TVO123)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align:center;">@Html.DisplayNameFor(model => model.TVO143)</li>
+            <li style="list-style-type:none; width:100px;">@Html.DisplayFor(model => model.TVO143)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align:center;">@Html.DisplayNameFor(model => model.TVO124)</li>
+            <li style="list-style-type:none; width:100px;">@Html.DisplayFor(model => model.TVO124)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align:center;">@Html.DisplayNameFor(model => model.TVO144)</li>
+            <li style="list-style-type:none; width:100px;">@Html.DisplayFor(model => model.TVO144)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align:center;">@Html.DisplayNameFor(model => model.TVO125)</li>
+            <li style="list-style-type:none; width:100px;">@Html.DisplayFor(model => model.TVO125)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align:center;">@Html.DisplayNameFor(model => model.TVO145)</li>
+            <li style="list-style-type:none; width:100px;">@Html.DisplayFor(model => model.TVO145)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align:center;">@Html.DisplayNameFor(model => model.TVO126)</li>
+            <li style="list-style-type:none; width:100px;">@Html.DisplayFor(model => model.TVO126)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align:center;">@Html.DisplayNameFor(model => model.TVO146)</li>
+            <li style="list-style-type:none; width:100px;">@Html.DisplayFor(model => model.TVO146)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align:center;">@Html.DisplayNameFor(model => model.TVO127)</li>
+            <li style="list-style-type:none; width:100px;">@Html.DisplayFor(model => model.TVO127)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align:center;">@Html.DisplayNameFor(model => model.TVO147)</li>
+            <li style="list-style-type:none; width:100px;">@Html.DisplayFor(model => model.TVO147)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align:center;">@Html.DisplayNameFor(model => model.TVO128)</li>
+            <li style="list-style-type:none; width:100px;">@Html.DisplayFor(model => model.TVO128)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align:center;">@Html.DisplayNameFor(model => model.TVO148)</li>
+            <li style="list-style-type:none; width:100px;">@Html.DisplayFor(model => model.TVO148)</li>
+        </ul>
+    </li>
+</ul>
+
+
+
+<!-- #region table variant -->
+@*<table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TVO121)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TVO141)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TVO122)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TVO142)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TVO123)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TVO143)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TVO124)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TVO144)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TVO125)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TVO145)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TVO126)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TVO146)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TVO127)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TVO147)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TVO128)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TVO148)
+            </th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.TVO121)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.TVO141)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.TVO122)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.TVO142)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.TVO123)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.TVO143)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.TVO124)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.TVO144)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.TVO125)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.TVO145)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.TVO126)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.TVO146)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.TVO127)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.TVO147)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.TVO128)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.TVO148)
+            </td>
+            <td>
+                    @Html.ActionLink("Edit", "Edit", new { id=model.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id=model.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id=model.Id })
+                </td>
+        </tr>
+    </table>*@
+
+<!-- #endregion -->

@@ -3,27 +3,57 @@
 @*<p>
         @Html.ActionLink("Create New", "Create")
     </p>*@
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.OB)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UN)
-        </th>
-        @*<th></th>*@
-    </tr>
-    <tr>
-        <td>
-            @Html.Partial("_UDTConfigSchritt", Model.OB)
-        </td>
-        <td>
-            @Html.Partial("_UDTConfigSchritt", Model.UN)
-        </td>
-        @*<td>
-                @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-                @Html.ActionLink("Details", "Details", new { id = Model.Id }) |
-                @Html.ActionLink("Delete", "Delete", new { id = Model.Id })
-            </td>*@
-    </tr>
-</table>
+
+<ul class="list-inline">
+    <li>
+        <ul style="list-style-type:none;">
+            <li style="text-align:center;">@Html.DisplayNameFor(model => model.OB)</li>
+            <li style="list-style-type:none;">@Html.Partial("_UDTConfigSchritt", Model.OB)</li>
+        </ul>
+    </li>
+    <li>
+        <ul style="list-style-type:none;">
+            <li style="text-align:center;">@Html.DisplayNameFor(model => model.UN)</li>
+            <li style="list-style-type:none;">@Html.Partial("_UDTConfigSchritt", Model.UN)</li>
+        </ul>
+    </li>
+</ul>
+
+@*<ul>
+    <li style="text-align:center;">@Html.DisplayNameFor(model => model.OB)</li>
+    <li style="list-style-type:none;">@Html.Partial("_UDTConfigSchritt", Model.OB)</li>
+</ul>
+
+<ul>
+    <li style="text-align:center;">@Html.DisplayNameFor(model => model.UN)</li>
+    <li style="list-style-type:none;">@Html.Partial("_UDTConfigSchritt", Model.UN)</li>
+</ul>*@
+
+
+<!-- #region table variant -->
+@*<table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.OB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UN)
+            </th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>
+                @Html.Partial("_UDTConfigSchritt", Model.OB)
+            </td>
+            <td>
+                @Html.Partial("_UDTConfigSchritt", Model.UN)
+            </td>
+            <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = Model.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = Model.Id })
+                </td>
+        </tr>
+    </table>*@
+
+<!-- #endregion -->
