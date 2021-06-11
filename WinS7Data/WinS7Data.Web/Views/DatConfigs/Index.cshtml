@@ -163,15 +163,9 @@
     @Scripts.Render("~/bundles/fixedheadertable")
     <script>
         $(document).ready(function () {
-
             /*2021-06-07 YK: Script call after table was builded*/
             $('#tablePlaceholder table').fixedHeaderTable({ height: '800', width: '1200', altClass: 'odd', themeClass: 'fancyDarkTable', fixedColumns: 2 });
             console.log(123);
-            //$('#runPlugin').bind('click', function (e) {
-            //    e.preventDefault();
-
-            //    $('#tablePlaceholder table').fixedHeaderTable({ height: '800', width: '1200',altClass: 'odd', themeClass: 'fancyDarkTable', fixedColumns: 2 });
-            //});
         });
     </script>
 }

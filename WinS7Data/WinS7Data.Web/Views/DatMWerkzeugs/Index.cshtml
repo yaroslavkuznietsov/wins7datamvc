@@ -119,6 +119,12 @@
     </div>
 </div>
 
+
+
+
+
+<!-- #region Test. Delete later -->
+
 <div class="container_16 table_options">
     @*<div class="grid_3 prefix_1 alpha">
             <h2>Table Properties</h2>
@@ -157,108 +163,9 @@
         <a id="runPlugin" class="button" href="#">Run Plugin</a>
     </div>
 </div>
-<!-- #region name -->
-@*<div class="container_12">
-        <div id="tablePlaceholder" class="grid_12 alpha omega">
-            <table>
-                <thead>
-                    <tr>
-                        <th>
-                            @Html.DisplayNameFor(model => model[0].ToolCode)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model[0].ToolName)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model[0].MachineId)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model[0].WerkzeughoeheA1)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model[0].WerkzeughoeheA2)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model[0].HeizelementhoeheObenA3)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model[0].HeizelementhoeheUntenA3)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model[0].WarmpositionA3)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model[0].BestueckungspositionA1)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model[0].BestueckungspositionA2)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model[0].PruefpositionA1)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model[0].PruefpositionA2)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model[0].IRKameraTriggerpositionA3)
-                        </th>
-
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in Model)
-                    {
-                        <tr>
-                            <td>
-                                @Html.DisplayFor(modelItem => Model.FirstOrDefault().FirstOrDefault().ToolCode)
-                            </td>
-                            <td style="white-space:nowrap">
-                                @Html.DisplayFor(modelItem => Model.FirstOrDefault().FirstOrDefault().ToolName)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => Model.FirstOrDefault().FirstOrDefault().MachineId)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => Model.FirstOrDefault().FirstOrDefault().WerkzeughoeheA1)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => Model.FirstOrDefault().FirstOrDefault().WerkzeughoeheA2)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => Model.FirstOrDefault().FirstOrDefault().HeizelementhoeheObenA3)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => Model.FirstOrDefault().FirstOrDefault().HeizelementhoeheUntenA3)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => Model.FirstOrDefault().FirstOrDefault().WarmpositionA3)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => Model.FirstOrDefault().FirstOrDefault().BestueckungspositionA1)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => Model.FirstOrDefault().FirstOrDefault().BestueckungspositionA2)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => Model.FirstOrDefault().FirstOrDefault().PruefpositionA1)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => Model.FirstOrDefault().FirstOrDefault().PruefpositionA2)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => Model.FirstOrDefault().FirstOrDefault().IRKameraTriggerpositionA3)
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
-        </div>
-    </div>*@
-
 
 
 <!-- #endregion -->
-
 
 
 @section Scripts {
@@ -266,82 +173,22 @@
     @Scripts.Render("~/bundles/fixedheadertable")
     <script>
         $(document).ready(function () {
-            $('#buildTable').bind('click', function (e) {
-                e.preventDefault();
+            //$('#buildTable').bind('click', function (e) {
+            //    e.preventDefault();
 
-                $('#tablePlaceholder').empty()
-                    .buildTable();
-            });
+            //    $('#tablePlaceholder').empty()
+            //        .buildTable();
+            //});
 
             /*2021-06-07 YK: Script call after table was builded*/
             $('#tablePlaceholder table').fixedHeaderTable({ height: '800', width: '1200', altClass: 'odd', themeClass: 'fancyDarkTable', fixedColumns: 2 });
+            console.log(123);
 
             $('#runPlugin').bind('click', function (e) {
                 e.preventDefault();
 
-                $('#tablePlaceholder table').fixedHeaderTable({ height: '800', width: '1200',altClass: 'odd', themeClass: 'fancyDarkTable', fixedColumns: 2 });
+                $('#tablePlaceholder table').fixedHeaderTable({ height: '800', width: '1200', altClass: 'odd', themeClass: 'fancyDarkTable', fixedColumns: 2 });
             });
-        });
-
-        $.fn.extend({
-            buildTable: function () {
-                var defaults = {
-                    width: '100%',
-                    height: 400,
-                    rows: 100,
-                    columns: 5,
-                    borderWidth: 1,
-                    borderColor: '#000000',
-                    padding: 5
-                };
-
-                console.log(123);
-
-                var $self = $(this),
-                    self = this,
-                    rows = $('#rows').val(),
-                    columns = $('#columns').val(),
-                    borderWidth = $('#borderWidth').val(),
-                    borderColor = $('#borderColor').val(),
-                    padding = $('#padding').val(),
-                    $thead,
-                    $tbody,
-                    $currentRow,
-                    $styles,
-                    options = {};
-
-                if (padding != '') {
-                    options.padding = padding;
-                }
-
-                options = $.extend({}, defaults, options);
-
-                $self.append('<table><thead></thead><tbody></tbody></table>');
-
-                $thead = $self.find('thead');
-                $thead.append('<tr></tr>');
-                for (var column = 1; column <= columns; column++) {
-                    $thead.find('tr')
-                        .append('<th>Column ' + column + '</th>');
-                }
-
-                $tbody = $self.find('tbody');
-                for (var row = 1; row <= rows; row++) {
-                    $currentRow = $('<tr></tr>').appendTo($tbody);
-
-                    for (var column = 1; column <= columns; column++) {
-                        $currentRow.append('<td>Column ' + column + '</td>');
-                    }
-                }
-
-                /*
-                        var paddingStyle = "padding: " + options.padding + "px !important;";
-
-                        $styles = $('<style></style>').appendTo('.styles');
-
-                        $styles.html('th, td { '+paddingStyle+' }');
-                */
-            }
         });
     </script>
 }
