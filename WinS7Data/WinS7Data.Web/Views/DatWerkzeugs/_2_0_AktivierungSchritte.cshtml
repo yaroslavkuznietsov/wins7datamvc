@@ -1,114 +1,222 @@
 ﻿@model WinS7Data.DataLibrary.Models.AktivierungSchritteClass
 
 @*<p>
-    @Html.ActionLink("Create New", "Create")
-</p>*@
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.SpannenT1)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SpannenT2)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Abholtakt)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Prueftakt)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.WarmVor)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.WarmEnde)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Auswerfer)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Roboter)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Reserve4)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Reserve5)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Reserve6)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Reserve7)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Reserve8)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Reserve9)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.StopNachFuegen)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.OeffnenNachFuegen)
-        </th>
-        @*<th></th>*@
-    </tr>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
 
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => Model.SpannenT1)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.SpannenT2)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.Abholtakt)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.Prueftakt)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.WarmVor)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.WarmEnde)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.Auswerfer)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.Roboter)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.Reserve4)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.Reserve5)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.Reserve6)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.Reserve7)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.Reserve8)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.Reserve9)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.StopNachFuegen)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.OeffnenNachFuegen)
-        </td>
-        @*<td>
-            @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
-            @Html.ActionLink("Details", "Details", new { id= Model.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id= Model.Id })
-        </td>*@
-    </tr>
-</table>
+
+<ul class="list-inline">
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none; width: 50px;">@Html.DisplayNameFor(model => model.SpannenT1)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.SpannenT1)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none; width: 50px;">@Html.DisplayNameFor(model => model.SpannenT2)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.SpannenT2)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none; width: 50px;">@Html.DisplayNameFor(model => model.Abholtakt)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.Abholtakt)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none; width: 50px;">@Html.DisplayNameFor(model => model.Prueftakt)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.Prueftakt)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.WarmVor)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.WarmVor)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.WarmEnde)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.WarmEnde)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.Auswerfer)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.Auswerfer)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.Roboter)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.Roboter)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.Reserve4)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.Reserve4)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.Reserve5)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.Reserve5)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.Reserve6)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.Reserve6)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.Reserve7)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.Reserve7)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.Reserve8)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.Reserve8)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.Reserve9)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.Reserve9)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.StopNachFuegen)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.StopNachFuegen)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.OeffnenNachFuegen)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.OeffnenNachFuegen)</li>
+        </ul>
+    </li>
+</ul>
+
+
+
+
+<!-- #region table variant -->
+@*<table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SpannenT1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpannenT2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Abholtakt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prueftakt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WarmVor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WarmEnde)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Auswerfer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Roboter)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reserve4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reserve5)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reserve6)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reserve7)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reserve8)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reserve9)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StopNachFuegen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OeffnenNachFuegen)
+            </th>
+            <th></th>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => Model.SpannenT1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.SpannenT2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Abholtakt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Prueftakt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.WarmVor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.WarmEnde)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Auswerfer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Roboter)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Reserve4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Reserve5)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Reserve6)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Reserve7)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Reserve8)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Reserve9)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.StopNachFuegen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.OeffnenNachFuegen)
+            </td>
+            <td>
+                    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id= Model.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id= Model.Id })
+                </td>
+        </tr>
+    </table>*@
+
+
+<!-- #endregion -->

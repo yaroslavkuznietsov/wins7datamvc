@@ -1,38 +1,66 @@
 ﻿@model WinS7Data.DataLibrary.Models.Warm2SchrittClass
 
 @*<p>
-    @Html.ActionLink("Create New", "Create")
-</p>*@
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.A1)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.A2)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Zeit)
-        </th>
-        @*<th></th>*@
-    </tr>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
 
-    <tr>
-        <td>
-            @Html.Partial("_3_4_x1_Warm2AchseA1A2Class", Model.A1)
-        </td>
-        <td>
-            @Html.Partial("_3_4_x1_Warm2AchseA1A2Class", Model.A2)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.Zeit)
-        </td>
 
-        @*<td>
-            @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-            @Html.ActionLink("Details", "Details", new { id = Model.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id = Model.Id })
-        </td>*@
-    </tr>
+<ul class="list-inline">
+    <li>
+        <ul>
+            <li>@Html.DisplayNameFor(model => model.A1)</li>
+            <li style="list-style-type: none; text-align: left;">@Html.Partial("_3_4_x1_Warm2AchseA1A2Class", Model.A1)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li>@Html.DisplayNameFor(model => model.A2)</li>
+            <li style="list-style-type: none; text-align: left;">@Html.Partial("_3_4_x1_Warm2AchseA1A2Class", Model.A2)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li>@Html.DisplayNameFor(model => model.Zeit)</li>
+            <li style="list-style-type: none; text-align: left;">@Html.DisplayFor(model => model.Zeit)</li>
+        </ul>
+    </li>
+</ul>
 
-</table>
+
+
+
+<!-- #region table version -->
+@*<table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.A1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.A2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Zeit)
+            </th>
+            <th></th>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.Partial("_3_4_x1_Warm2AchseA1A2Class", Model.A1)
+            </td>
+            <td>
+                @Html.Partial("_3_4_x1_Warm2AchseA1A2Class", Model.A2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Zeit)
+            </td>
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = Model.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = Model.Id })
+            </td>
+        </tr>
+    </table>*@
+
+<!-- #endregion -->

@@ -3,112 +3,219 @@
 @*<p>
     @Html.ActionLink("Create New", "Create")
 </p>*@
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ExternerE1)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ExternerE2)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ExternePruefung1)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ExternePruefung2)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.OptionUmschaltung1)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Reserve6)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Reserve7)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Reserve8)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Reserve9)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Reserve10)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Reserve11)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Reserve12)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Reserve13)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Reserve14)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Reserve15)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Reserve16)
-        </th>
-        @*<th></th>*@
-    </tr>
 
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => Model.ExternerE1)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.ExternerE2)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.ExternePruefung1)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.ExternePruefung2)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.OptionUmschaltung1)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.Reserve6)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.Reserve7)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.Reserve8)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.Reserve9)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.Reserve10)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.Reserve11)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.Reserve12)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.Reserve13)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.Reserve14)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.Reserve15)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.Reserve16)
-        </td>
-        @*<td>
-            @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=Model.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=Model.Id })
-        </td>*@
-    </tr>
-</table>
+
+<ul class="list-inline">
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.ExternerE1)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.ExternerE1)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.ExternerE2)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.ExternerE2)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.ExternePruefung1)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.ExternePruefung1)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.ExternePruefung2)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.ExternePruefung2)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.OptionUmschaltung1)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.OptionUmschaltung1)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.Reserve6)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.Reserve6)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.Reserve7)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.Reserve7)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.Reserve8)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.Reserve8)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.Reserve9)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.Reserve9)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.Reserve10)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.Reserve10)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.Reserve11)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.Reserve11)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.Reserve12)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.Reserve12)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.Reserve13)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.Reserve13)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.Reserve14)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.Reserve14)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.Reserve15)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.Reserve15)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.Reserve16)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.Reserve16)</li>
+        </ul>
+    </li>
+</ul>
+
+
+
+<!-- #region table variant -->
+@*<table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ExternerE1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExternerE2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExternePruefung1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExternePruefung2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OptionUmschaltung1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reserve6)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reserve7)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reserve8)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reserve9)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reserve10)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reserve11)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reserve12)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reserve13)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reserve14)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reserve15)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reserve16)
+            </th>
+            <th></th>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => Model.ExternerE1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.ExternerE2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.ExternePruefung1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.ExternePruefung2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.OptionUmschaltung1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Reserve6)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Reserve7)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Reserve8)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Reserve9)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Reserve10)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Reserve11)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Reserve12)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Reserve13)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Reserve14)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Reserve15)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Reserve16)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+                @Html.ActionLink("Details", "Details", new { id=Model.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=Model.Id })
+            </td>
+        </tr>
+    </table>*@
+
+
+<!-- #endregion -->

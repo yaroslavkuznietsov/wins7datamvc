@@ -1,35 +1,67 @@
 ﻿@model WinS7Data.DataLibrary.Models.ZaehlerClass
 
 @*<p>
-    @Html.ActionLink("Create New", "Create")
-</p>*@
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.NIONF)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NIOVF)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Stueckzaehler)
-        </th>
-        <th></th>
-    </tr>
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => Model.NIONF)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.NIOVF)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.Stueckzaehler)
-        </td>
-        @*<td>
-            @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=Model.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=Model.Id })
-        </td>*@
-    </tr>
-</table>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+
+
+
+<ul class="list-inline">
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.NIONF)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.NIONF)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.NIOVF)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.NIOVF)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.Stueckzaehler)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.Stueckzaehler)</li>
+        </ul>
+    </li>
+
+</ul>
+
+
+
+
+<!-- #region table variant -->
+
+@*<table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NIONF)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NIOVF)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Stueckzaehler)
+            </th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => Model.NIONF)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.NIOVF)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Stueckzaehler)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+                @Html.ActionLink("Details", "Details", new { id=Model.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=Model.Id })
+            </td>
+        </tr>
+    </table>*@
+
+<!-- #endregion -->

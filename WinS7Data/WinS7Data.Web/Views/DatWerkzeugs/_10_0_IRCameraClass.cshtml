@@ -1,41 +1,76 @@
 ﻿@model WinS7Data.DataLibrary.Models.IRCameraClass
 
 @*<p>
-    @Html.ActionLink("Create New", "Create")
-</p>*@
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.KameraSchalter)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.KameraLuftschleier)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.KameraStartFuegenNachIR)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.KameraFehlerVrzNachIR)
-        </th>
-        @*<th></th>*@
-    </tr>
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => Model.KameraSchalter)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.KameraLuftschleier)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.KameraStartFuegenNachIR)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.KameraFehlerVrzNachIR)
-        </td>
-        @*<td>
-            @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=Model.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=Model.Id })
-        </td>*@
-    </tr>
-</table>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+
+
+<ul class="list-inline">
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.KameraSchalter)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.KameraSchalter)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.KameraLuftschleier)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.KameraLuftschleier)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.KameraStartFuegenNachIR)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.KameraStartFuegenNachIR)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.KameraFehlerVrzNachIR)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.KameraFehlerVrzNachIR)</li>
+        </ul>
+    </li>
+</ul>
+
+
+
+<!-- #region table variant -->
+@*<table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.KameraSchalter)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KameraLuftschleier)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KameraStartFuegenNachIR)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KameraFehlerVrzNachIR)
+            </th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => Model.KameraSchalter)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.KameraLuftschleier)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.KameraStartFuegenNachIR)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.KameraFehlerVrzNachIR)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+                @Html.ActionLink("Details", "Details", new { id=Model.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=Model.Id })
+            </td>
+        </tr>
+    </table>*@
+
+
+<!-- #endregion -->

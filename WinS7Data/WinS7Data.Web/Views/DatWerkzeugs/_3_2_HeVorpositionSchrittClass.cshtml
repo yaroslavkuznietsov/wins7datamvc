@@ -1,29 +1,52 @@
 ﻿@model WinS7Data.DataLibrary.Models.HEVorpositionSchrittClass
 
 @*<p>
-    @Html.ActionLink("Create New", "Create")
-</p>*@
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.A1)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.A2)
-        </th>
-        @*<th></th>*@
-    </tr>
-    <tr>
-        <td>
-            @Html.Partial("_3_2_x1_HEVorpositionAchseA1A2Class", Model.A1)
-        </td>
-        <td>
-            @Html.Partial("_3_2_x1_HEVorpositionAchseA1A2Class", Model.A2)
-        </td>
-        @*<td>
-                @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
-                @Html.ActionLink("Details", "Details", new { id= Model.Id }) |
-                @Html.ActionLink("Delete", "Delete", new { id= Model.Id })
-            </td>*@
-    </tr>
-</table>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+
+<ul class="list-inline">
+    <li>
+        <ul>
+            <li>@Html.DisplayNameFor(model => model.A1)</li>
+            <li style="list-style-type: none; text-align: left;">@Html.Partial("_3_2_x1_HEVorpositionAchseA1A2Class", Model.A1)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li>@Html.DisplayNameFor(model => model.A2)</li>
+            <li style="list-style-type: none; text-align: left;">@Html.Partial("_3_2_x1_HEVorpositionAchseA1A2Class", Model.A2)</li>
+        </ul>
+    </li>
+</ul>
+
+
+
+
+
+<!-- #region table variant -->
+@*<table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.A1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.A2)
+            </th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>
+                @Html.Partial("_3_2_x1_HEVorpositionAchseA1A2Class", Model.A1)
+            </td>
+            <td>
+                @Html.Partial("_3_2_x1_HEVorpositionAchseA1A2Class", Model.A2)
+            </td>
+            <td>
+                    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id= Model.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id= Model.Id })
+                </td>
+        </tr>
+    </table>*@
+
+<!-- #endregion -->

@@ -1,29 +1,52 @@
 ﻿@model WinS7Data.DataLibrary.Models.Ausgleichshub
 
 @*<p>
-    @Html.ActionLink("Create New", "Create")
-</p>*@
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Links)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Rechts)
-        </th>
-        @*<th></th>*@
-    </tr>
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => Model.Links)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.Rechts)
-        </td>
-        @*<td>
-            @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=Model.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=Model.Id })
-        </td>*@
-    </tr>
-</table>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+
+
+<ul class="list-inline">
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.Links)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.Links)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.Links)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.Links)</li>
+        </ul>
+    </li>
+</ul>
+
+
+
+<!-- #region table variant -->
+
+@*<table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Links)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rechts)
+            </th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Links)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Rechts)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+                @Html.ActionLink("Details", "Details", new { id=Model.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=Model.Id })
+            </td>
+        </tr>
+    </table>*@
+
+<!-- #endregion -->

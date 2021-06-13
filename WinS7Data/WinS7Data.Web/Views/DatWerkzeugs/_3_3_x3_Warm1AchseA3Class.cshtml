@@ -1,25 +1,42 @@
 ﻿@model WinS7Data.DataLibrary.Models.Warm1AchseA3Class
 
 @*<p>
-    @Html.ActionLink("Create New", "Create")
-</p>*@
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Position)
-        </th>
-        <th></th>
-    </tr>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
 
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => Model.Position)
-        </td>
-        @*<td>
-            @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=Model.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=Model.Id })
-        </td>*@
-    </tr>
 
-</table>
+<ul class="list-inline">
+    <li>
+        <ul style="list-style-type: none; text-align: left;">
+            <li style="text-align: left">@Html.DisplayNameFor(model => model.Position)</li>
+            <li style="list-style-type: none;">@Html.DisplayFor(model => model.Position)</li>
+        </ul>
+    </li>
+</ul>
+
+
+
+
+<!-- #region table variant -->
+@*<table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Position)
+            </th>
+            <th></th>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Position)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+                @Html.ActionLink("Details", "Details", new { id=Model.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=Model.Id })
+            </td>
+        </tr>
+
+    </table>*@
+
+<!-- #endregion -->

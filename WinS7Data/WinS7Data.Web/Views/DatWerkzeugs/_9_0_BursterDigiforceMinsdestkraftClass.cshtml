@@ -1,60 +1,119 @@
 ﻿@model WinS7Data.DataLibrary.Models.BursterDigiforceMinsdestkraftClass
 
 @*<p>
-    @Html.ActionLink("Create New", "Create")
-</p>*@
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.BursterMindestKraftAktiv)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MindestkraftSollNest1)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MindestkraftToleranzPlusNest1)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MindestkraftToleranzMinusNest1)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MindestkraftSollNest2)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MindestkraftToleranzPlusNest2)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MindestkraftToleranzMinusNest2)
-        </th>
-        @*<th></th>*@
-    </tr>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
 
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => Model.BursterMindestKraftAktiv)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.MindestkraftSollNest1)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.MindestkraftToleranzPlusNest1)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.MindestkraftToleranzMinusNest1)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.MindestkraftSollNest2)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.MindestkraftToleranzPlusNest2)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => Model.MindestkraftToleranzMinusNest2)
-        </td>
-        @*<td>
-            @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=Model.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=Model.Id })
-        </td>*@
-    </tr>
-</table>
+
+<ul class="list-inline">
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.BursterMindestKraftAktiv)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.BursterMindestKraftAktiv)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.MindestkraftSollNest1)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.MindestkraftSollNest1)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.MindestkraftToleranzPlusNest1)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.MindestkraftToleranzPlusNest1)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.MindestkraftToleranzMinusNest1)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.MindestkraftToleranzMinusNest1)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.MindestkraftToleranzMinusNest1)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.MindestkraftToleranzMinusNest1)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.MindestkraftSollNest2)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.MindestkraftSollNest2)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.MindestkraftToleranzPlusNest2)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.MindestkraftToleranzPlusNest2)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayNameFor(model => model.MindestkraftToleranzMinusNest2)</li>
+            <li style="text-align: center; list-style-type: none;">@Html.DisplayFor(model => model.MindestkraftToleranzMinusNest2)</li>
+        </ul>
+    </li>
+</ul>
+
+
+
+<!-- #region table variant -->
+
+@*<table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BursterMindestKraftAktiv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MindestkraftSollNest1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MindestkraftToleranzPlusNest1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MindestkraftToleranzMinusNest1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MindestkraftSollNest2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MindestkraftToleranzPlusNest2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MindestkraftToleranzMinusNest2)
+            </th>
+            <th></th>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => Model.BursterMindestKraftAktiv)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.MindestkraftSollNest1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.MindestkraftToleranzPlusNest1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.MindestkraftToleranzMinusNest1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.MindestkraftSollNest2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.MindestkraftToleranzPlusNest2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.MindestkraftToleranzMinusNest2)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+                @Html.ActionLink("Details", "Details", new { id=Model.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=Model.Id })
+            </td>
+        </tr>
+    </table>*@
+
+<!-- #endregion -->

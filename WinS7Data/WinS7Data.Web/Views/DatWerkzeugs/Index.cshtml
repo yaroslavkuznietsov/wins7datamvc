@@ -7,117 +7,139 @@
 <h2>Index</h2>
 
 @*<p>
-    @Html.ActionLink("Create New", "Create")
-</p>*@
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ToolCode)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ToolName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Kennung.RFIDHE)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Kennung.RFIDOB)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Kennung.RFIDUN)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AktivierungSchritte)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ParameterSchritte)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AchsenStrom)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Zaehler)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AktivierungN2Gas)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AktivierungSontiges)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.BursterDigiforceKraftWeg)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.BursterDigiforceMinsdestkraft)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.IRCamera)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DMXCheck)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Ausgleichshub)
-        </th>
-        @*<th></th>*@
-    </tr>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
 
-@foreach (var item in Model) {
-<tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.ToolCode)
-    </td>
-    <td style="white-space:nowrap">
-        @Html.DisplayFor(modelItem => item.ToolName)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Kennung.RFIDHE)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Kennung.RFIDOB)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Kennung.RFIDUN)
-    </td>
-    <td>
-        @Html.Partial("_2_0_AktivierungSchritte", item.AktivierungSchritte)
-    </td>
-    <td>
-        @Html.Partial("_3_0_ParameterSchritteClass", item.ParameterSchritte)
-    </td>
-    <td>
-        @Html.Partial("_4_0_AchsenStromClass", item.AchsenStrom)
-    </td>
-    <td>
-        @Html.Partial("_5_0_ZaehlerClass", item.Zaehler)
-    </td>
-    <td>
-        @Html.Partial("_6_0_AktivierungN2GasClass", item.AktivierungN2Gas)
-    </td>
-    <td>
-        @Html.Partial("_7_0_AktivierungSontigesClass", item.AktivierungSontiges)
-    </td>
-    <td>
-        @Html.Partial("_8_0_BursterDigiforceKraftWegClass", item.BursterDigiforceKraftWeg)
-    </td>
-    <td>
-        @Html.Partial("_9_0_BursterDigiforceMinsdestkraftClass", item.BursterDigiforceMinsdestkraft)
-    </td>
-    <td>
-        @Html.Partial("_10_0_IRCameraClass", item.IRCamera)
-    </td>
-    <td>
-        @Html.Partial("_11_0_DMXCheckClass", item.DMXCheck)
-    </td>
-    <td>
-        @Html.Partial("_12_0_Ausgleichshub", item.Ausgleichshub)
-    </td>
-    @*<td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>*@
-</tr>
+
+<div class="container_12">
+    <div id="tablePlaceholder" class="grid_12 alpha omega">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ToolCode)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ToolName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Kennung.RFIDHE)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Kennung.RFIDOB)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Kennung.RFIDUN)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.AktivierungSchritte)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ParameterSchritte)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.AchsenStrom)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Zaehler)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.AktivierungN2Gas)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.AktivierungSontiges)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.BursterDigiforceKraftWeg)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.BursterDigiforceMinsdestkraft)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.IRCamera)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DMXCheck)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Ausgleichshub)
+                    </th>
+                    @*<th></th>*@
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ToolCode)
+                        </td>
+                        <td style="white-space:nowrap">
+                            @Html.DisplayFor(modelItem => item.ToolName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Kennung.RFIDHE)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Kennung.RFIDOB)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Kennung.RFIDUN)
+                        </td>
+                        <td style="white-space: nowrap">
+                            @Html.Partial("_2_0_AktivierungSchritte", item.AktivierungSchritte)
+                        </td>
+                        <td style="white-space: nowrap;">
+                            @Html.Partial("_3_0_ParameterSchritteClass", item.ParameterSchritte)
+                        </td>
+                        <td style="white-space: nowrap;">
+                            @Html.Partial("_4_0_AchsenStromClass", item.AchsenStrom)
+                        </td>
+                        <td style="white-space: nowrap;">
+                            @Html.Partial("_5_0_ZaehlerClass", item.Zaehler)
+                        </td>
+                        <td style="white-space: nowrap;">
+                            @Html.Partial("_6_0_AktivierungN2GasClass", item.AktivierungN2Gas)
+                        </td>
+                        <td style="white-space: nowrap;">
+                            @Html.Partial("_7_0_AktivierungSontigesClass", item.AktivierungSontiges)
+                        </td>
+                        <td style="white-space: nowrap;">
+                            @Html.Partial("_8_0_BursterDigiforceKraftWegClass", item.BursterDigiforceKraftWeg)
+                        </td>
+                        <td style="white-space: nowrap;">
+                            @Html.Partial("_9_0_BursterDigiforceMinsdestkraftClass", item.BursterDigiforceMinsdestkraft)
+                        </td>
+                        <td style="white-space: nowrap;">
+                            @Html.Partial("_10_0_IRCameraClass", item.IRCamera)
+                        </td>
+                        <td style="white-space: nowrap;">
+                            @Html.Partial("_11_0_DMXCheckClass", item.DMXCheck)
+                        </td>
+                        <td style="white-space: nowrap;">
+                            @Html.Partial("_12_0_Ausgleichshub", item.Ausgleichshub)
+                        </td>
+                        @*<td>
+                                @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+                                @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+                                @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+                            </td>*@
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/fixedheadertable")
+    <script>
+        $(document).ready(function () {
+            /*2021-06-07 YK: Script call after table was builded*/
+            $('#tablePlaceholder table').fixedHeaderTable({ height: '800', width: '1200', altClass: 'odd', themeClass: 'fancyDarkTable', fixedColumns: 2 });
+            console.log(123);
+        });
+    </script>
 }
-
-</table>

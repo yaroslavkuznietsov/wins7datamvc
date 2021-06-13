@@ -1,53 +1,101 @@
 ﻿@model WinS7Data.DataLibrary.Models.ParameterSchritteClass
 
 @*<p>
-    @Html.ActionLink("Create New", "Create")
-</p>*@
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Abhol)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.HEVorposition)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Warm1)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Warm2)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Fuege)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Schmelzbild)
-        </th>
-        @*<th></th>*@
-    </tr>
-    <tr>
-        <td>
-            @Html.Partial("_3_1_AbholSchrittClass", Model.Abhol)
-        </td>
-        <td>
-            @Html.Partial("_3_2_HeVorpositionSchrittClass", Model.HEVorposition)
-        </td>
-        <td>
-            @Html.Partial("_3_3_Warm1SchrittClass", Model.Warm1)
-        </td>
-        <td>
-            @Html.Partial("_3_4_Warm2SchrittClass", Model.Warm2)
-        </td>
-        <td>
-            @Html.Partial("_3_5_FuegeSchrittClass", Model.Fuege)
-        </td>
-        <td>
-            @Html.Partial("_3_6_SchmelzbildSchrittClass", Model.Schmelzbild)
-        </td>
-        @*<td>
-            @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=Model.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=Model.Id })
-        </td>*@
-    </tr>
-</table>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+
+
+<ul class="list-inline">
+    <li>
+        <ul>
+            <li style="text-decoration:underline;">@Html.DisplayNameFor(model => model.Abhol)</li>
+            <li style="list-style-type: none; text-align: left;">@Html.Partial("_3_1_AbholSchrittClass", Model.Abhol)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-decoration:underline;">@Html.DisplayNameFor(model => model.HEVorposition)</li>
+            <li style="list-style-type: none; text-align: left;">@Html.Partial("_3_2_HeVorpositionSchrittClass", Model.HEVorposition)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-decoration:underline;">@Html.DisplayNameFor(model => model.Warm1)</li>
+            <li style="list-style-type: none; text-align: left;">@Html.Partial("_3_3_Warm1SchrittClass", Model.Warm1)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-decoration:underline;">@Html.DisplayNameFor(model => model.Warm2)</li>
+            <li style="list-style-type: none; text-align: left;">@Html.Partial("_3_4_Warm2SchrittClass", Model.Warm2)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-decoration:underline;">@Html.DisplayNameFor(model => model.Fuege)</li>
+            <li style="list-style-type: none; text-align: left;">@Html.Partial("_3_5_FuegeSchrittClass", Model.Fuege)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li style="text-decoration:underline;">@Html.DisplayNameFor(model => model.Schmelzbild)</li>
+            <li style="list-style-type: none; text-align: left;">@Html.Partial("_3_6_SchmelzbildSchrittClass", Model.Schmelzbild)</li>
+        </ul>
+    </li>
+</ul>
+
+
+
+
+<!-- #region table variant -->
+@*<table class="table">
+        <tr>
+            <th style="white-space: nowrap;">
+                @Html.DisplayNameFor(model => model.Abhol)
+            </th>
+            <th style="white-space: nowrap;">
+                @Html.DisplayNameFor(model => model.HEVorposition)
+            </th>
+            <th style="white-space: nowrap;">
+                @Html.DisplayNameFor(model => model.Warm1)
+            </th>
+            <th style="white-space: nowrap;">
+                @Html.DisplayNameFor(model => model.Warm2)
+            </th>
+            <th style="white-space: nowrap;">
+                @Html.DisplayNameFor(model => model.Fuege)
+            </th>
+            <th style="white-space: nowrap;">
+                @Html.DisplayNameFor(model => model.Schmelzbild)
+            </th>
+            <th></th>
+        </tr>
+        <tr>
+            <td style="white-space: nowrap;">
+                @Html.Partial("_3_1_AbholSchrittClass", Model.Abhol)
+            </td>
+            <td style="white-space: nowrap;">
+                @Html.Partial("_3_2_HeVorpositionSchrittClass", Model.HEVorposition)
+            </td>
+            <td style="white-space: nowrap;">
+                @Html.Partial("_3_3_Warm1SchrittClass", Model.Warm1)
+            </td>
+            <td style="white-space: nowrap;">
+                @Html.Partial("_3_4_Warm2SchrittClass", Model.Warm2)
+            </td>
+            <td style="white-space: nowrap;">
+                @Html.Partial("_3_5_FuegeSchrittClass", Model.Fuege)
+            </td>
+            <td style="white-space: nowrap;">
+                @Html.Partial("_3_6_SchmelzbildSchrittClass", Model.Schmelzbild)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+                @Html.ActionLink("Details", "Details", new { id=Model.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=Model.Id })
+            </td>
+        </tr>
+    </table>*@
+
+
+<!-- #endregion -->

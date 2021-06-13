@@ -1,49 +1,89 @@
 ﻿@model WinS7Data.DataLibrary.Models.FuegeAchseA1Class
 
 @*<p>
-    @Html.ActionLink("Create New", "Create")
-</p>*@
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.VorPosition)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EndPosition)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Geschwindigkeit)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.OeffnungswegNachFuegen)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.RueckhubGeschwingkeitFuegen)
-        </th>
-        @*<th></th>*@
-    </tr>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
 
-    <tr>
-        <td>
-            @Html.DisplayFor(model => model.VorPosition)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.EndPosition)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.Geschwindigkeit)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.OeffnungswegNachFuegen)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.RueckhubGeschwingkeitFuegen)
-        </td>
-        @*<td>
-            @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=Model.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=Model.Id })
-        </td>*@
-    </tr>
 
-</table>
+<ul class="list-inline">
+    <li>
+        <ul style="list-style-type: none; text-align: left;">
+            <li style="text-align: left">@Html.DisplayNameFor(model => model.VorPosition)</li>
+            <li style="list-style-type: none;">@Html.DisplayFor(model => model.VorPosition)</li>
+        </ul>
+    </li>
+    <li>
+        <ul style="list-style-type: none; text-align: left;">
+            <li style="text-align: left">@Html.DisplayNameFor(model => model.EndPosition)</li>
+            <li style="list-style-type: none;">@Html.DisplayFor(model => model.EndPosition)</li>
+        </ul>
+    </li>
+    <li>
+        <ul style="list-style-type: none; text-align: left;">
+            <li style="text-align: left">@Html.DisplayNameFor(model => model.Geschwindigkeit)</li>
+            <li style="list-style-type: none;">@Html.DisplayFor(model => model.Geschwindigkeit)</li>
+        </ul>
+    </li>
+    <li>
+        <ul style="list-style-type: none; text-align: left;">
+            <li style="text-align: left">@Html.DisplayNameFor(model => model.OeffnungswegNachFuegen)</li>
+            <li style="list-style-type: none;">@Html.DisplayFor(model => model.OeffnungswegNachFuegen)</li>
+        </ul>
+    </li>
+    <li>
+        <ul style="list-style-type: none; text-align: left;">
+            <li style="text-align: left">@Html.DisplayNameFor(model => model.RueckhubGeschwingkeitFuegen)</li>
+            <li style="list-style-type: none;">@Html.DisplayFor(model => model.RueckhubGeschwingkeitFuegen)</li>
+        </ul>
+    </li>
+</ul>
+
+
+
+
+<!-- #region table variant -->
+@*<table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.VorPosition)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndPosition)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Geschwindigkeit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OeffnungswegNachFuegen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RueckhubGeschwingkeitFuegen)
+            </th>
+            <th></th>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.VorPosition)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.EndPosition)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Geschwindigkeit)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.OeffnungswegNachFuegen)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.RueckhubGeschwingkeitFuegen)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+                @Html.ActionLink("Details", "Details", new { id=Model.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=Model.Id })
+            </td>
+        </tr>
+    </table>*@
+
+<!-- #endregion -->
