@@ -21,10 +21,14 @@ namespace WinS7Data.Web
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                 "~/Scripts/jquery.fixedheadertable.js",
+                "~/Scripts/jquery.mousewheel.js",
                 "~/Scripts/bootstrap.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/fixedheadertable").Include(
                       "~/Scripts/jquery.fixedheadertable.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/mousewheel").Include(
+                      "~/Scripts/jquery.mousewheel.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",

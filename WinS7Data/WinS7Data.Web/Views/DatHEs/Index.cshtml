@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Daten Heizelement</h2>
 
 @*<p>
         @Html.ActionLink("Create New", "Create")
@@ -205,10 +205,10 @@
                             @Html.Partial("_HK", item.HK24)
                         </td>
                         @*<td>
-                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-                        </td>*@
+                                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                            </td>*@
                     </tr>
                 }
             </tbody>
@@ -220,10 +220,11 @@
 @section Scripts {
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/fixedheadertable")
+    @Scripts.Render("~/bundles/mousewheel")
     <script>
         $(document).ready(function () {
             /*2021-06-07 YK: Script call after table was builded*/
-            $('#tablePlaceholder table').fixedHeaderTable({ height: '800', width: '1200', altClass: 'odd', themeClass: 'fancyDarkTable', fixedColumns: 2 });
+            $('#tablePlaceholder table').fixedHeaderTable({ height: '800', width: '1300', altClass: 'odd', themeClass: 'fancyDarkTable', fixedColumns: 2 });
             console.log(123);
         });
     </script>

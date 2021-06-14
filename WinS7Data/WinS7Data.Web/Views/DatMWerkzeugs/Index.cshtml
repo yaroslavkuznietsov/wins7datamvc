@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Daten MWerkzeug</h2>
 
 @*<p>
         @Html.ActionLink("Create New", "Create")
@@ -124,45 +124,44 @@
 
 
 <!-- #region Test. Delete later -->
+@*<div class="container_16 table_options">
+        <div class="grid_3 prefix_1 alpha">
+                <h2>Table Properties</h2>
+                <fieldset>
+                    <label for="rows">rows</label>
+                    <input id="rows" type="text" value="" />
+                </fieldset>
+                <fieldset>
+                    <label for="columns">columns</label>
+                    <input id="columns" type="text" value="" />
+                </fieldset>
+            </div>
 
-<div class="container_16 table_options">
-    @*<div class="grid_3 prefix_1 alpha">
-            <h2>Table Properties</h2>
-            <fieldset>
-                <label for="rows">rows</label>
-                <input id="rows" type="text" value="" />
-            </fieldset>
-            <fieldset>
-                <label for="columns">columns</label>
-                <input id="columns" type="text" value="" />
-            </fieldset>
+            <div class="grid_4">
+                <h2>Table Appearance</h2>
+                <fieldset>
+                    <label for="borderWidth">border-width</label>
+                    <input id="borderWidth" type="text" value="" placeholder="ex. 1px" />
+                </fieldset>
+                <fieldset>
+                    <label for="borderColor">border-color</label>
+                    <input id="borderColor" type="text" value="" placeholder="ex. #353535" />
+                </fieldset>
+            </div>
+
+            <div class="grid_3">
+                <h2>&nbsp;</h2>
+                <fieldset>
+                    <label for="padding">padding</label>
+                    <input id="padding" type="text" value="" placeholder="ex. 5" />
+                </fieldset>
+            </div>
+
+        <div class="grid_2 prefix_2 omega">
+            <a id="buildTable" class="button" href="#">Build Table</a>
+            <a id="runPlugin" class="button" href="#">Run Plugin</a>
         </div>
-
-        <div class="grid_4">
-            <h2>Table Appearance</h2>
-            <fieldset>
-                <label for="borderWidth">border-width</label>
-                <input id="borderWidth" type="text" value="" placeholder="ex. 1px" />
-            </fieldset>
-            <fieldset>
-                <label for="borderColor">border-color</label>
-                <input id="borderColor" type="text" value="" placeholder="ex. #353535" />
-            </fieldset>
-        </div>
-
-        <div class="grid_3">
-            <h2>&nbsp;</h2>
-            <fieldset>
-                <label for="padding">padding</label>
-                <input id="padding" type="text" value="" placeholder="ex. 5" />
-            </fieldset>
-        </div>*@
-
-    <div class="grid_2 prefix_2 omega">
-        @*<a id="buildTable" class="button" href="#">Build Table</a>*@
-        <a id="runPlugin" class="button" href="#">Run Plugin</a>
-    </div>
-</div>
+    </div>*@
 
 
 <!-- #endregion -->
@@ -171,6 +170,7 @@
 @section Scripts {
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/fixedheadertable")
+    @Scripts.Render("~/bundles/mousewheel")
     <script>
         $(document).ready(function () {
             //$('#buildTable').bind('click', function (e) {
@@ -181,14 +181,14 @@
             //});
 
             /*2021-06-07 YK: Script call after table was builded*/
-            $('#tablePlaceholder table').fixedHeaderTable({ height: '800', width: '1200', altClass: 'odd', themeClass: 'fancyDarkTable', fixedColumns: 2 });
+            $('#tablePlaceholder table').fixedHeaderTable({ height: '800', width: '1300', altClass: 'odd', themeClass: 'fancyDarkTable', fixedColumns: 2 });
             console.log(123);
 
-            $('#runPlugin').bind('click', function (e) {
-                e.preventDefault();
+            //$('#runPlugin').bind('click', function (e) {
+            //    e.preventDefault();
 
-                $('#tablePlaceholder table').fixedHeaderTable({ height: '800', width: '1200', altClass: 'odd', themeClass: 'fancyDarkTable', fixedColumns: 2 });
-            });
+            //    $('#tablePlaceholder table').fixedHeaderTable({ height: '800', width: '1200', altClass: 'odd', themeClass: 'fancyDarkTable', fixedColumns: 2 });
+            //});
         });
     </script>
 }
