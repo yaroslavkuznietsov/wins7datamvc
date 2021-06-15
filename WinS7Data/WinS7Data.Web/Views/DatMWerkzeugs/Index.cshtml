@@ -16,57 +16,59 @@
         <table>
             <thead>
                 <tr>
-                    @for (int i = 0; i < Model.FirstOrDefault().Count; i++)
-                    {
+                    @*@for (int i = 0; i < Model.FirstOrDefault().Count; i++)
+                    {*@
                         <th>
-                            @Html.DisplayNameFor(model => model[i].ToolCode)
+                            @Html.DisplayNameFor(model => model.FirstOrDefault().ToolCode)
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model[i].ToolName)
+                            @Html.DisplayNameFor(model => model.FirstOrDefault().ToolName)
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model[i].MachineId)
+                            @Html.DisplayNameFor(model => model.FirstOrDefault().MachineId)
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model[i].WerkzeughoeheA1)
+                            @Html.DisplayNameFor(model => model.FirstOrDefault().WerkzeughoeheA1)
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model[i].WerkzeughoeheA2)
+                            @Html.DisplayNameFor(model => model.FirstOrDefault().WerkzeughoeheA2)
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model[i].HeizelementhoeheObenA3)
+                            @Html.DisplayNameFor(model => model.FirstOrDefault().HeizelementhoeheObenA3)
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model[i].HeizelementhoeheUntenA3)
+                            @Html.DisplayNameFor(model => model.FirstOrDefault().HeizelementhoeheUntenA3)
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model[i].WarmpositionA3)
+                            @Html.DisplayNameFor(model => model.FirstOrDefault().WarmpositionA3)
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model[i].BestueckungspositionA1)
+                            @Html.DisplayNameFor(model => model.FirstOrDefault().BestueckungspositionA1)
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model[i].BestueckungspositionA2)
+                            @Html.DisplayNameFor(model => model.FirstOrDefault().BestueckungspositionA2)
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model[i].PruefpositionA1)
+                            @Html.DisplayNameFor(model => model.FirstOrDefault().PruefpositionA1)
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model[i].PruefpositionA2)
+                            @Html.DisplayNameFor(model => model.FirstOrDefault().PruefpositionA2)
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model[i].IRKameraTriggerpositionA3)
+                            @Html.DisplayNameFor(model => model.FirstOrDefault().IRKameraTriggerpositionA3)
                         </th>
                         @*<th></th>*@
-                    }
+                    @*}*@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var item in Model)
+
+                @for (int i = 0; i < Model.FirstOrDefault().Count; i++)
                 {
-                    <tr>
-                        @for (int i = 0; i < item.Count; i++)
-                        {
+                    foreach (var item in Model)
+                    {
+
+                        <tr>
                             <td>
                                 @Html.DisplayFor(modelItem => item[i].ToolCode)
                             </td>
@@ -107,13 +109,14 @@
                                 @Html.DisplayFor(modelItem => item[i].IRKameraTriggerpositionA3)
                             </td>
                             @*<td>
-                                    @Html.ActionLink("Edit", "Edit", new { id = item[i].Id }) |
-                                    @Html.ActionLink("Details", "Details", new { id = item[i].Id }) |
-                                    @Html.ActionLink("Delete", "Delete", new { id = item[i].Id })
-                                </td>*@
-                        }
-                    </tr>
-                }
+                                @Html.ActionLink("Edit", "Edit", new { id = item[i].Id }) |
+                                @Html.ActionLink("Details", "Details", new { id = item[i].Id }) |
+                                @Html.ActionLink("Delete", "Delete", new { id = item[i].Id })
+                            </td>*@
+                        </tr>
+                    }
+                 }
+                        
             </tbody>
         </table>
     </div>
@@ -181,7 +184,7 @@
             //});
 
             /*2021-06-07 YK: Script call after table was builded*/
-            $('#tablePlaceholder table').fixedHeaderTable({ height: '800', width: '1300', altClass: 'odd', themeClass: 'fancyDarkTable', fixedColumns: 2 });
+            $('#tablePlaceholder table').fixedHeaderTable({ height: '800', width: '1300', altClass: 'odd', themeClass: 'fancyDarkTable', fixedColumns: 3 });
             console.log(123);
 
             //$('#runPlugin').bind('click', function (e) {
